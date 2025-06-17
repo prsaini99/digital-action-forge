@@ -18,20 +18,9 @@ const ImageLoader = ({ src, alt, fallbackSrc, className }: ImageLoaderProps) => 
     setLoading(true);
     setError(false);
     
-    // Normalize the source path
+    // Set the image source directly - no need for complex processing
     if (src) {
-      // Check if it's a remote URL (for placeholder images)
-      if (src.startsWith('http')) {
-        setImgSrc(src);
-      }
-      // Special handling for lovable-uploads paths
-      else if (src.includes('lovable-uploads')) {
-        setImgSrc(src);
-      } else {
-        // Remove any leading 'public/' from the path if present
-        const normalizedSrc = src.startsWith('public/') ? src.substring(7) : src;
-        setImgSrc(normalizedSrc);
-      }
+      setImgSrc(src);
     }
   }, [src]);
 
