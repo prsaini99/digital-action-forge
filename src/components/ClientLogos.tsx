@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import ImageLoader from './ImageLoader';
-import { validateImageUrl, getImageFallback } from '../utils/imageValidator';
+import { getImageFallback } from '../utils/imageValidator';
 import {
   Carousel,
   CarouselContent,
@@ -77,7 +77,7 @@ const clients = [
 
 const ClientLogos = () => {
   // Create an autoplay plugin instance
-  const [plugin, setPlugin] = useState<Autoplay | null>(null);
+  const [plugin, setPlugin] = useState<ReturnType<typeof Autoplay> | null>(null);
 
   useEffect(() => {
     // Create a new autoplay plugin when component mounts
