@@ -120,7 +120,7 @@ const ClientLogos = () => {
               <CarouselItem key={client.name} className="pl-1 md:basis-1/4 lg:basis-1/5">
                 <div className="grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110 p-2 flex items-center justify-center h-24">
                   <ImageLoader 
-                    src={validateImageUrl(client.logo, '')}
+                    src={client.logo}
                     alt={`${client.name} logo`}
                     fallbackSrc={getImageFallback('logo', client.name)}
                     className="h-16 w-auto max-w-[150px] object-contain"
