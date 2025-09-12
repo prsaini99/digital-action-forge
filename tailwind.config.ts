@@ -63,14 +63,14 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for Call to Action
+				// Custom colors for Chaar Log
 				cta: {
-					primary: '#2D3A8C', // Deep blue
-					secondary: '#5A67D8', // Indigo
-					accent: '#7928CA', // Purple
-					highlight: '#00E5FF', // Electric blue highlight
-					dark: '#1A1F2C', // Dark background
-					light: '#F7FAFC', // Light background
+					primary: '#2C3E50', // Dark navy blue from logo
+					secondary: '#FF6B6B', // Coral red from logo
+					accent: '#E74C3C', // Darker red accent
+					highlight: '#FF8E8E', // Light coral highlight
+					dark: '#1A252F', // Dark navy background
+					light: '#FFF5F5', // Light coral background
 				}
 			},
 			borderRadius: {

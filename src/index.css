@@ -106,7 +106,7 @@
   }
   
   .gradient-bg {
-    @apply bg-gradient-to-r from-cta-primary to-cta-accent;
+    @apply bg-gradient-to-r from-cta-primary to-cta-secondary;
   }
   
   .cta-button {

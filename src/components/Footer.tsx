@@ -98,7 +98,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-6 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Call To Action. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Chaar Log. All rights reserved.</p>
         </div>
       </div>
     </footer>

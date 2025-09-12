@@ -16,8 +16,8 @@ const Logo = ({ className = '', variant = 'dark' }: LogoProps) => {
   return (
     <Link to="/" className={`block ${className}`}>
       <img 
-        src="/lovable-uploads/ccf98407-84db-4be9-9a46-d989de048de5.png" 
-        alt="Call to Action Logo" 
+        src="/lovable-uploads/345317be-11a4-4517-9dc1-0ca644defa97.png" 
+        alt="Chaar Log Communications Logo" 
         className={`h-32 ${variant === 'light' ? 'brightness-100' : 'brightness-100'}`}
         onError={handleImageError}
         onLoad={() => console.log('Logo loaded successfully')}

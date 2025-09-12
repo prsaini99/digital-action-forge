@@ -107,7 +107,7 @@ const Services = () => {
                 Integrated Solutions for the Digital Age
               </h3>
               <p className="text-lg text-gray-600 mb-4">
-                At Call to Action, we don't believe in siloed approaches. We integrate marketing creativity with technological innovation to create cohesive digital strategies that address the entire customer journey.
+                At Chaar Log, we don't believe in siloed approaches. We integrate marketing creativity with technological innovation to create cohesive digital strategies that address the entire customer journey.
               </p>
               <p className="text-lg text-gray-600">
                 Whether you're looking to increase brand awareness, generate high-quality leads, develop custom software, or implement cutting-edge AI solutions, our team has the expertise to help you achieve your goals.

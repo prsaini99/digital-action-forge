@@ -31,7 +31,7 @@ const NriProposal = () => {
               <h2 className="font-bold text-2xl md:text-3xl">Proposal for International Lead Generation</h2>
               <p className="text-xl">Sobha Ltd. | Kochi & Thrissur Projects</p>
               <div className="mt-4">
-                <p><strong>Prepared By:</strong> Call To Action (CTA)</p>
+                <p><strong>Prepared By:</strong> Chaar Log</p>
                 <p><strong>Prepared For:</strong> Sobha Ltd.</p>
                 <p><strong>Date:</strong> April 4, 2025</p>
               </div>
@@ -39,7 +39,7 @@ const NriProposal = () => {
 
             <h3>1. Executive Summary</h3>
             <p>
-              We at Call To Action (CTA) are pleased to propose a comprehensive international lead generation strategy 
+              We at Chaar Log are pleased to propose a comprehensive international lead generation strategy 
               utilizing Meta Ads and Programmatic Advertising. Our proven data-driven approach targets affluent Non-Resident 
               Indian (NRI) audiences across prioritized global markets, significantly boosting engagement and conversions 
               for Sobha's premium residential offerings in Kochi and Thrissur.
@@ -292,9 +292,9 @@ const NriProposal = () => {
               <li>Campaign activation within 7-14 days post-approval</li>
             </ol>
 
-            <h3>10. About Call To Action (CTA)</h3>
+            <h3>10. About Chaar Log</h3>
             <p>
-              Call To Action (CTA) is an innovative, data-driven marketing agency specializing in digital advertising and 
+              Chaar Log is an innovative, data-driven marketing agency specializing in digital advertising and 
               lead generation solutions for premium real estate and luxury market segments. Leveraging our proprietary DSP 
               and extensive audience data, we deliver high-quality leads, cost efficiency, and measurable ROI.
             </p>

@@ -34,7 +34,7 @@ const About = () => {
         <div className="container-custom">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-display font-bold leading-tight mb-6">
-              About Call To Action
+              About Chaar Log
             </h1>
             <p className="text-xl text-white/90 mb-6">
               We're a digital marketing and technology venture focused on delivering impactful results through innovative, data-driven, and creative strategies.
@@ -123,7 +123,7 @@ const About = () => {
                 <span className="gradient-text">Our Story</span>
               </h2>
               <p className="text-lg text-gray-600 mb-4">
-                Call to Action was founded by digital experts who saw a gap in the market for an agency that could seamlessly blend creative marketing with advanced technological solutions.
+                Chaar Log was founded by digital experts who saw a gap in the market for an agency that could seamlessly blend creative marketing with advanced technological solutions.
               </p>
               <p className="text-lg text-gray-600 mb-4">
                 Despite our humble beginnings as "arguably the smallest digital agency in the world," we've grown to work with major international brands while maintaining our agility and personalized approach.

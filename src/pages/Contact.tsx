@@ -55,7 +55,7 @@ const Contact = () => {
               Contact Us
             </h1>
             <p className="text-xl text-white/90">
-              Let's discuss how Call to Action can help you achieve your digital marketing and technology goals.
+              Let's discuss how Chaar Log can help you achieve your digital marketing and technology goals.
             </p>
           </div>
         </div>
@@ -254,7 +254,7 @@ const Contact = () => {
               allowFullScreen={true}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Call to Action office location"
+              title="Chaar Log office location"
             ></iframe>
           </div>
         </div>

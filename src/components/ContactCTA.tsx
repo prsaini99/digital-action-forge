@@ -11,7 +11,7 @@ const ContactCTA = () => {
             Ready to Transform Your Digital Presence?
           </h2>
           <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Partner with Call to Action to create innovative, data-driven solutions that drive real business results.
+            Partner with Chaar Log to create innovative, data-driven solutions that drive real business results.
           </p>
           <Link 
             to="/contact" 

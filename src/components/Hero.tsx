@@ -26,7 +26,7 @@ const Hero = () => {
             <span className="text-cta-highlight">Powerful Tech Solutions</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl">
-            Call to Action delivers creative, data-driven strategies powered by cutting-edge technology. 
+            Chaar Log delivers creative, data-driven strategies powered by cutting-edge technology. 
             From AI development to blockchain solutions, we help brands make meaningful connections.
           </p>
           <div className="flex flex-wrap gap-4">
