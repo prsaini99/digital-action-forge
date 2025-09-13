@@ -1,7 +1,7 @@
 
 import { Zap, Target, Lightbulb, Users } from 'lucide-react';
 import ContactCTA from '../components/ContactCTA';
-import TeamSection from '../components/TeamSection';
+import Logo from '../components/Logo';
 
 const About = () => {
   const values = [
@@ -107,16 +107,8 @@ const About = () => {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <img 
-                src="/images/about/our-story.jpg" 
-                alt="Our story" 
-                className="rounded-xl shadow-lg w-full object-cover h-full max-h-[400px]" 
-                onError={(e) => {
-                  // Fallback to placeholder if image fails to load
-                  e.currentTarget.src = "https://via.placeholder.com/600x400?text=Our+Story";
-                }}
-              />
+            <div className="flex items-center justify-center">
+              <Logo className="max-w-sm" />
             </div>
             <div>
               <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
@@ -135,9 +127,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      {/* Team Section */}
-      <TeamSection />
 
       {/* Contact CTA */}
       <ContactCTA />

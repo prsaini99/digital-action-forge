@@ -3,24 +3,7 @@ import { Linkedin, Twitter } from 'lucide-react';
 import ImageLoader from './ImageLoader';
 import { createPlaceholderImage } from '../utils/imageValidator';
 
-const team = [
-  {
-    name: 'Pranav Singh',
-    role: 'Co-Founder & Technical Director',
-    bio: 'Tech entrepreneur, Director at Mondee, Founder of 11point2, and CMO at MetaSpace and Floxypay. Expert in AI, fintech, Web3, and business development.',
-    image: '/images/team/pranav-singh.jpg',
-    linkedin: '#',
-    twitter: '#'
-  },
-  {
-    name: 'Ahsan Z Jawed',
-    role: 'Co-Founder & Digital Strategist',
-    bio: 'Entrepreneur with 18+ years in digital marketing and business development. Experienced in scaling startups and has worked with top global brands.',
-    image: '/images/team/ahsan-jawed.jpg',
-    linkedin: '#',
-    twitter: '#'
-  }
-];
+const team: any[] = [];
 
 const TeamSection = () => {
   return (
