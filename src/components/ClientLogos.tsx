@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from 'react';
+import { memo } from 'react';
 import ImageLoader from './ImageLoader';
 import { getImageFallback } from '../utils/imageValidator';
 import {
@@ -76,29 +76,11 @@ const clients = [
 ];
 
 const ClientLogos = () => {
-  // Create an autoplay plugin instance
-  const [plugin, setPlugin] = useState<ReturnType<typeof Autoplay> | null>(null);
-
-  useEffect(() => {
-    // Create a new autoplay plugin when component mounts
-    if (!plugin) {
-      setPlugin(
-        Autoplay({
-          delay: 2000, // 2 seconds between slides
-          stopOnInteraction: true, // Stop autoplay when user interacts
-          stopOnMouseEnter: true, // Pause autoplay on mouse hover
-          rootNode: (emblaRoot) => emblaRoot.parentElement, // Defaults to emblaRoot
-        })
-      );
-    }
-
-    // Cleanup function to stop autoplay when component unmounts
-    return () => {
-      if (plugin) {
-        plugin.stop();
-      }
-    };
-  }, [plugin]);
+  const autoplayPlugin = Autoplay({
+    delay: 2000,
+    stopOnInteraction: true,
+    stopOnMouseEnter: true,
+  });
 
   return (
     <section className="py-12 bg-gray-50">
@@ -109,7 +91,7 @@ const ClientLogos = () => {
         
         <Carousel 
           className="w-full max-w-screen-xl mx-auto"
-          plugins={plugin ? [plugin] : undefined}
+          plugins={[autoplayPlugin as any]}
           opts={{
             align: "start",
             loop: true,
@@ -139,4 +121,4 @@ const ClientLogos = () => {
   );
 };
 
-export default ClientLogos;
+export default memo(ClientLogos);

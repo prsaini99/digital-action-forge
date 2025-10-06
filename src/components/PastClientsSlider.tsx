@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, memo } from 'react';
 
 const PastClientsSlider = () => {
   const [currentSet, setCurrentSet] = useState(0);
@@ -64,7 +64,7 @@ const PastClientsSlider = () => {
                     }
                   }}
                   className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105"
-                  loading="eager"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -96,4 +96,4 @@ const PastClientsSlider = () => {
   );
 };
 
-export default PastClientsSlider;
+export default memo(PastClientsSlider);

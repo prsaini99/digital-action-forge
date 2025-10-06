@@ -14,36 +14,28 @@ const ImageLoader = ({ src, alt, fallbackSrc, className }: ImageLoaderProps) => 
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    console.log('ImageLoader useEffect called with src:', src);
-    // Reset states when src changes
     setLoading(true);
     setError(false);
     
-    // Set the image source directly - ensure we have a valid src
     if (src && src.trim() !== '') {
-      console.log('Setting image src to:', src);
       setImgSrc(src);
     } else {
-      console.log('Empty or invalid src provided:', src);
       setError(true);
       setLoading(false);
     }
   }, [src]);
 
   const handleError = () => {
-    console.log(`Image failed to load: ${imgSrc}, using fallback`);
     setLoading(false);
     if (!error && fallbackSrc) {
       setImgSrc(fallbackSrc);
       setError(true);
     } else if (!fallbackSrc) {
-      console.log(`Image failed to load: ${imgSrc}, no fallback provided`);
       setError(true);
     }
   };
 
   const handleLoad = () => {
-    console.log('Image loaded successfully:', imgSrc);
     setLoading(false);
   };
 
