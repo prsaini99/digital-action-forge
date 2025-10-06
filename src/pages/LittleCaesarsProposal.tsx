@@ -48,8 +48,8 @@ const LittleCaesarsProposal = () => {
         </div>
       </section>
 
-      {/* Section 2: The Indian Pizza Market */}
-      <section className="min-h-screen flex items-center py-20 bg-gradient-to-br from-gray-900 to-black text-white">
+      {/* Section 2: Mission - Making Little Caesars Unforgettable in India */}
+      <section className="min-h-screen flex items-center py-20 bg-white">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -57,41 +57,72 @@ const LittleCaesarsProposal = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-6xl font-bold mb-12 text-[#E66200]">
-              The Indian Pizza Market
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-[#E66200]">
+              Mission: Making Little Caesars Unforgettable in India
             </h2>
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <div className="space-y-6 text-lg">
-                  <div className="flex items-start gap-4">
-                    <TrendingUp className="w-8 h-8 text-[#E66200] flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="text-2xl font-semibold mb-2">Market Size</h3>
-                      <p className="text-gray-300">₹16,000 Crores (2023) growing at 15% CAGR</p>
-                    </div>
+            <p className="text-xl text-gray-600 mb-16 max-w-4xl">
+              A dynamic digital launch strategy with creative, engaging formats to build lasting brand buzz
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Diagram */}
+              <div className="flex justify-center">
+                <img 
+                  src="/little-caesars/slide-1-diagram.png" 
+                  alt="Launch Campaign Overview" 
+                  className="w-full max-w-md"
+                />
+              </div>
+
+              {/* Content */}
+              <div className="space-y-8">
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0 w-16 h-16 bg-[#2563EB] rounded-lg flex items-center justify-center text-white text-2xl font-bold">
+                    01
                   </div>
-                  <div className="flex items-start gap-4">
-                    <Users className="w-8 h-8 text-[#E66200] flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="text-2xl font-semibold mb-2">Target Audience</h3>
-                      <p className="text-gray-300">18-35 year-olds in Tier 1 & 2 cities</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <Target className="w-8 h-8 text-[#E66200] flex-shrink-0 mt-1" />
-                    <div>
-                      <h3 className="text-2xl font-semibold mb-2">Key Opportunity</h3>
-                      <p className="text-gray-300">Value-for-money positioning with quality products</p>
-                    </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Launch Campaign Overview</h3>
+                    <p className="text-gray-700 text-lg">
+                      Create 3 unique feed posts and 6 stories designed to generate excitement and awareness.
+                    </p>
                   </div>
                 </div>
-              </div>
-              <div className="relative h-96">
-                <img 
-                  src="/little-caesars/slide-2.jpg" 
-                  alt="Indian Pizza Market" 
-                  className="w-full h-full object-contain rounded-2xl"
-                />
+
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0 w-16 h-16 bg-[#0EA5E9] rounded-lg flex items-center justify-center text-white text-2xl font-bold">
+                    02
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Feed Creatives</h3>
+                    <p className="text-gray-700 text-lg">
+                      Develop a mix of Reel/Short, Carousel, and Static/GIF posts with engaging captions, hashtags, and alt text.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0 w-16 h-16 bg-[#10B981] rounded-lg flex items-center justify-center text-white text-2xl font-bold">
+                    03
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Story Arcs</h3>
+                    <p className="text-gray-700 text-lg">
+                      Craft interactive stories focusing on brand education and open interpretation, using stickers and clear rationale.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0 w-16 h-16 bg-[#F59E0B] rounded-lg flex items-center justify-center text-white text-2xl font-bold">
+                    04
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Campaign Goal</h3>
+                    <p className="text-gray-700 text-lg">
+                      Deliver zero blandness and ensure a bold, memorable digital presence for Little Caesars in India.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>
