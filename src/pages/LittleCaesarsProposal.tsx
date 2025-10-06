@@ -1,6 +1,14 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Users, TrendingUp, Target, BarChart3, Globe, Smartphone, MessageSquare } from "lucide-react";
+import { Play, ChevronLeft, ChevronRight } from "lucide-react";
 import Logo from "@/components/Logo";
+import { Card } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const LittleCaesarsProposal = () => {
   return (
@@ -17,31 +25,42 @@ const LittleCaesarsProposal = () => {
         </div>
       </header>
 
-      {/* Section 1: Cover Slide */}
+      {/* Slide 1: Mission */}
       <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#E66200] to-[#FF8533] text-white relative overflow-hidden pt-20">
         <div className="container mx-auto px-6 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="max-w-5xl mx-auto"
           >
-            <img 
-              src="/little-caesars/logo.jpg" 
-              alt="Little Caesars" 
-              className="w-48 h-48 mx-auto mb-8 shadow-2xl"
-            />
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              Creative Digital Marketing Strategy
+              Mission: Little Caesars Pizza Launch
             </h1>
-            <p className="text-2xl md:text-3xl mb-8 opacity-90">
-              for Little Caesars India
+            <p className="text-3xl md:text-4xl mb-12 font-light">
+              Three posts, six stories, zero blandness.<br/>
+              Let's make Little Caesars unforgettable
             </p>
-            <p className="text-xl opacity-80">Presented by Chaar Log</p>
+            
+            <div className="grid md:grid-cols-3 gap-8 mt-16 text-left">
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
+                <h3 className="text-2xl font-bold mb-3">Feed Creative Trio</h3>
+                <p className="text-white/90">3 unique posts - Reel, Carousel & Static</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
+                <h3 className="text-2xl font-bold mb-3">Story Sequence</h3>
+                <p className="text-white/90">6 stories across 2 engaging arcs</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
+                <h3 className="text-2xl font-bold mb-3">Complete Package</h3>
+                <p className="text-white/90">Captions, hashtags & alt text included</p>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Section 2: Mission - Making Little Caesars Unforgettable in India */}
+      {/* Slide 2: The Catch 22 */}
       <section className="min-h-screen flex items-center py-20 bg-white">
         <div className="container mx-auto px-6">
           <motion.div
@@ -50,290 +69,270 @@ const LittleCaesarsProposal = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-[#E66200]">
-              Mission: Making Little Caesars Unforgettable in India
+            <h2 className="text-5xl md:text-7xl font-bold mb-12 text-[#E66200]">
+              The Catch 22 of the Indian Pizza Market
             </h2>
-            <p className="text-xl text-gray-600 mb-16 max-w-4xl">
-              A dynamic digital launch strategy with creative, engaging formats to build lasting brand buzz
+            
+            <div className="grid md:grid-cols-2 gap-12 mb-16">
+              <div className="space-y-6">
+                <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-xl">
+                  <p className="text-xl text-gray-800">
+                    Little Caesars has an ardent fan-following in its country of origin.
+                  </p>
+                </div>
+                <div className="bg-orange-50 border-l-4 border-[#E66200] p-6 rounded-r-xl">
+                  <p className="text-xl text-gray-800">
+                    In India, the brand has little mindshare.
+                  </p>
+                </div>
+                <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-r-xl">
+                  <p className="text-xl text-gray-800">
+                    Expecting people to line up on launch announcement alone is futile.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-[#E66200] to-[#FF8533] text-white p-10 rounded-3xl shadow-2xl">
+                <h3 className="text-3xl font-bold mb-8">The Secret Sauce of Solutions:</h3>
+                <ul className="space-y-4 text-lg">
+                  <li className="flex items-start gap-3">
+                    <span className="text-2xl">✓</span>
+                    <span>Introduce the brand & its legacy quickly.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-2xl">✓</span>
+                    <span>Highlight differentiators vs Domino's & Pizza Hut.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-2xl">✓</span>
+                    <span>Make location and launch date memorable in a quirky way.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Slide 3: How We Do It */}
+      <section className="min-h-screen flex items-center py-20 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-5xl md:text-7xl font-bold mb-12 text-[#E66200]">
+              How We Do It
+            </h2>
+            <p className="text-2xl text-gray-700 mb-12">
+              Highlight & answer the six interrogatives about the brand:
             </p>
+
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-[#E66200]/20 hover:border-[#E66200] transition-all">
+                <div className="text-[#E66200] text-5xl font-bold mb-4">Who</div>
+                <p className="text-xl text-gray-700">are we?</p>
+              </div>
+              <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-[#E66200]/20 hover:border-[#E66200] transition-all">
+                <div className="text-[#E66200] text-5xl font-bold mb-4">What</div>
+                <p className="text-xl text-gray-700">do we do?</p>
+              </div>
+              <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-[#E66200]/20 hover:border-[#E66200] transition-all">
+                <div className="text-[#E66200] text-5xl font-bold mb-4">How</div>
+                <p className="text-xl text-gray-700">do we do it?</p>
+              </div>
+              <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-[#E66200]/20 hover:border-[#E66200] transition-all">
+                <div className="text-[#E66200] text-5xl font-bold mb-4">Why</div>
+                <p className="text-xl text-gray-700">should you care?</p>
+              </div>
+              <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-[#E66200]/20 hover:border-[#E66200] transition-all">
+                <div className="text-[#E66200] text-5xl font-bold mb-4">When</div>
+                <p className="text-xl text-gray-700">are we coming to India?</p>
+              </div>
+              <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-[#E66200]/20 hover:border-[#E66200] transition-all">
+                <div className="text-[#E66200] text-5xl font-bold mb-4">Where</div>
+                <p className="text-xl text-gray-700">are we launching our first store?</p>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-[#E66200] to-[#FF8533] text-white p-8 rounded-2xl text-center">
+              <p className="text-2xl font-bold">
+                Answer the big six and make Little Caesars stick in their minds
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Slide 4: Who's This Mysterious Pie Master? */}
+      <section className="min-h-screen flex items-center py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-5xl md:text-7xl font-bold mb-8 text-[#E66200]">
+              Who's This Mysterious Pie Master?
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-12 items-start">
+              {/* Video Placeholder */}
+              <div className="relative">
+                <div className="aspect-[9/16] bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl shadow-2xl overflow-hidden flex items-center justify-center">
+                  <div className="text-center">
+                    <Play className="w-20 h-20 text-white/80 mx-auto mb-4" />
+                    <p className="text-white/60 text-sm uppercase tracking-wider">Creative 1 - Reel</p>
+                    <p className="text-white/80 text-lg mt-2">15-20 sec Video</p>
+                  </div>
+                </div>
+                <div className="mt-4 bg-[#E66200] text-white px-4 py-2 rounded-lg inline-block">
+                  <p className="font-semibold">Format: 15–20 sec Reel</p>
+                </div>
+              </div>
+
+              {/* Post Content */}
+              <div className="space-y-6">
+                <div className="bg-orange-50 p-6 rounded-2xl border-l-4 border-[#E66200]">
+                  <h3 className="text-xl font-bold text-[#E66200] mb-2">Purpose</h3>
+                  <p className="text-gray-800">Introduce Little Caesars and its legacy to the Indian audience.</p>
+                </div>
+
+                <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Post Descriptor</h3>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    It's new in your town, but it has been a global legend.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    Little Caesars has been flipping dough and winning hearts since 1959. And what started in Detroit, didn't stay in Detroit but expanded to over 25 countries. That's millions of pizzas, countless fans, and one iconic mascot who never stops saying 'Pizza! Pizza!'
+                  </p>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    And now, the wait is finally over. For the very first time, Little Caesars is landing in India.
+                  </p>
+                  <p className="text-gray-900 font-bold">
+                    Mark your calendars—June 22. The pizza you didn't know you were craving is almost here.
+                  </p>
+                </div>
+
+                <div className="bg-gray-50 p-4 rounded-xl">
+                  <p className="text-sm text-gray-600">
+                    #LittleCaesars #PizzaPizza #NowInIndia #PizzaLovers #HotNReady #PizzaTime
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Slide 5: Creative 2 */}
+      <section className="min-h-screen flex items-center py-20 bg-gradient-to-br from-gray-900 to-black text-white">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="grid md:grid-cols-2 gap-12 items-start">
+              {/* Post Content */}
+              <div className="space-y-6">
+                <div className="bg-[#E66200]/20 p-6 rounded-2xl border-l-4 border-[#E66200]">
+                  <h3 className="text-xl font-bold text-[#E66200] mb-2">Purpose</h3>
+                  <p className="text-white/90">Position Little Caesars alongside Domino's and Pizza Hut, highlighting where we shine and stand out.</p>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+                  <h3 className="text-2xl font-bold mb-4">Post Descriptor</h3>
+                  <p className="text-white/90 leading-relaxed mb-4">
+                    You were today years old when you found out that the world's largest family-owned pizza brand is one you've never even heard of.
+                  </p>
+                  <p className="text-white/90 leading-relaxed mb-4">
+                    Not Domino's. Not Pizza Hut.
+                  </p>
+                  <p className="text-white/90 leading-relaxed mb-4">
+                    This silent slayer actually sells more in-store pizzas than the other two combined crowds.
+                  </p>
+                  <p className="text-white/90 leading-relaxed mb-4">
+                    And guess what? The hidden champ is finally coming to India.
+                  </p>
+                  <p className="text-white font-bold text-lg">
+                    June 22. Mark the date. (And maybe your diet chart too.)
+                  </p>
+                </div>
+
+                <div className="bg-white/5 p-4 rounded-xl">
+                  <p className="text-sm text-white/60">
+                    #LittleCaesars #PizzaPizza #NowInIndia #PizzaLovers #HotNReady #PizzaTime
+                  </p>
+                </div>
+              </div>
+
+              {/* Video Placeholder */}
+              <div className="relative">
+                <div className="aspect-[9/16] bg-gradient-to-br from-[#E66200] to-[#FF8533] rounded-3xl shadow-2xl overflow-hidden flex items-center justify-center">
+                  <div className="text-center">
+                    <Play className="w-20 h-20 text-white/90 mx-auto mb-4" />
+                    <p className="text-white/70 text-sm uppercase tracking-wider">Creative 2 - Reel</p>
+                    <p className="text-white text-lg mt-2">30-40 sec Video</p>
+                  </div>
+                </div>
+                <div className="mt-4 bg-white text-[#E66200] px-4 py-2 rounded-lg inline-block">
+                  <p className="font-semibold">Format: 30–40 sec Reel</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Slide 6: What Do We Do? - Hot-N-Ready */}
+      <section className="min-h-screen flex items-center py-20 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <img src="/little-caesars/bg-ingredients.jpg" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="container mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-5xl md:text-7xl font-bold mb-8 text-[#E66200]">
+              What Do We Do?
+            </h2>
+            <p className="text-3xl text-gray-800 mb-12 font-semibold">Give you Hot-N-Ready pies</p>
             
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Diagram */}
-              <div className="flex justify-center">
-                <img 
-                  src="/little-caesars/slide-1-diagram.png" 
-                  alt="Launch Campaign Overview" 
-                  className="w-full max-w-md"
-                />
+              {/* Story Placeholder */}
+              <div className="relative">
+                <div className="aspect-[9/16] bg-gradient-to-br from-[#E66200] to-[#FF8533] rounded-3xl shadow-2xl overflow-hidden flex items-center justify-center max-w-sm mx-auto">
+                  <div className="text-center p-6">
+                    <div className="w-16 h-16 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                      <span className="text-3xl">📖</span>
+                    </div>
+                    <p className="text-white/80 text-sm uppercase tracking-wider">Creative 3 - Story</p>
+                    <p className="text-white text-lg mt-2">Arc B - 15 sec</p>
+                  </div>
+                </div>
               </div>
 
               {/* Content */}
-              <div className="space-y-8">
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0 w-16 h-16 bg-[#2563EB] rounded-lg flex items-center justify-center text-white text-2xl font-bold">
-                    01
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Launch Campaign Overview</h3>
-                    <p className="text-gray-700 text-lg">
-                      Create 3 unique feed posts and 6 stories designed to generate excitement and awareness.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0 w-16 h-16 bg-[#0EA5E9] rounded-lg flex items-center justify-center text-white text-2xl font-bold">
-                    02
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Feed Creatives</h3>
-                    <p className="text-gray-700 text-lg">
-                      Develop a mix of Reel/Short, Carousel, and Static/GIF posts with engaging captions, hashtags, and alt text.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0 w-16 h-16 bg-[#10B981] rounded-lg flex items-center justify-center text-white text-2xl font-bold">
-                    03
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Story Arcs</h3>
-                    <p className="text-gray-700 text-lg">
-                      Craft interactive stories focusing on brand education and open interpretation, using stickers and clear rationale.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0 w-16 h-16 bg-[#F59E0B] rounded-lg flex items-center justify-center text-white text-2xl font-bold">
-                    04
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Campaign Goal</h3>
-                    <p className="text-gray-700 text-lg">
-                      Deliver zero blandness and ensure a bold, memorable digital presence for Little Caesars in India.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 3: Why Little Caesars Needs Digital Marketing */}
-      <section className="min-h-screen flex items-center py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl md:text-6xl font-bold mb-12 text-[#E66200]">
-              Why Little Caesars Needs Digital Marketing
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl shadow-lg border-2 border-[#E66200]/20">
-                <div className="w-16 h-16 bg-[#E66200] rounded-full flex items-center justify-center mb-6">
-                  <Users className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-900">Brand Awareness</h3>
-                <p className="text-gray-700">Build strong brand recall in a competitive market dominated by Domino's and Pizza Hut</p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl shadow-lg border-2 border-gray-300">
-                <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mb-6">
-                  <Target className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-900">Target Precision</h3>
-                <p className="text-gray-700">Reach the right audience - young, value-conscious consumers who love quality pizza</p>
-              </div>
-
-              <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl shadow-lg border-2 border-[#E66200]/20">
-                <div className="w-16 h-16 bg-[#E66200] rounded-full flex items-center justify-center mb-6">
-                  <TrendingUp className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-900">Cost Efficiency</h3>
-                <p className="text-gray-700">Deliver better ROI compared to traditional advertising channels</p>
-              </div>
-
-              <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-2xl shadow-lg border-2 border-gray-300">
-                <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mb-6">
-                  <BarChart3 className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-gray-900">Measurable Results</h3>
-                <p className="text-gray-700">Track every rupee spent and optimize campaigns in real-time</p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 4: Campaign Objectives */}
-      <section className="min-h-screen flex items-center py-20 bg-gradient-to-br from-gray-900 to-black text-white">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl md:text-6xl font-bold mb-12 text-[#E66200]">
-              Campaign Objectives
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-[#E66200]/40">
-                <div className="text-6xl font-bold text-[#E66200] mb-4">01</div>
-                <h3 className="text-2xl font-bold mb-4">Increase Brand Awareness</h3>
-                <p className="text-gray-300">Target: 5M+ impressions in 3 months across digital platforms</p>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-[#E66200]/40">
-                <div className="text-6xl font-bold text-[#E66200] mb-4">02</div>
-                <h3 className="text-2xl font-bold mb-4">Drive Store Footfall</h3>
-                <p className="text-gray-300">Goal: 20% increase in walk-ins through location-based campaigns</p>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-[#E66200]/40">
-                <div className="text-6xl font-bold text-[#E66200] mb-4">03</div>
-                <h3 className="text-2xl font-bold mb-4">Boost Online Orders</h3>
-                <p className="text-gray-300">Target: 30% growth in online orders via social media campaigns</p>
-              </div>
-            </div>
-            <div className="mt-12">
-              <img 
-                src="/little-caesars/slide-4.jpg" 
-                alt="Campaign Objectives" 
-                className="w-full max-w-4xl mx-auto rounded-2xl shadow-2xl"
-              />
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 5: Core Strategy */}
-      <section className="min-h-screen flex items-center py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl md:text-6xl font-bold mb-12 text-[#E66200]">
-              Core Strategy: "Pizza! Pizza!"
-            </h2>
-            <div className="bg-gradient-to-br from-[#E66200] to-[#FF8533] text-white p-12 rounded-3xl shadow-2xl mb-12">
-              <h3 className="text-3xl font-bold mb-6">Our Approach</h3>
-              <p className="text-xl leading-relaxed">
-                Leverage Little Caesars' iconic "Pizza! Pizza!" slogan to create memorable, 
-                shareable content that emphasizes value, quality, and convenience. Focus on 
-                platforms where our target audience spends most of their time: Instagram, 
-                Facebook, and YouTube.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-8">
-              <img 
-                src="/little-caesars/slide-5.jpg" 
-                alt="Strategy Diagram" 
-                className="w-full rounded-2xl shadow-xl"
-              />
-              <div className="flex flex-col justify-center space-y-4 text-gray-700">
-                <p className="text-lg">✓ Create engaging, shareable content</p>
-                <p className="text-lg">✓ Focus on value proposition</p>
-                <p className="text-lg">✓ Build emotional connection</p>
-                <p className="text-lg">✓ Drive online and offline traffic</p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 6: Platform Strategy */}
-      <section className="min-h-screen flex items-center py-20 bg-gradient-to-br from-gray-900 to-black text-white">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl md:text-6xl font-bold mb-12 text-[#E66200]">
-              Platform Strategy
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-[#E66200]/40">
-                <Globe className="w-12 h-12 text-[#E66200] mb-6" />
-                <h3 className="text-2xl font-bold mb-4">Meta Platforms</h3>
-                <p className="text-gray-300 mb-4">Facebook & Instagram</p>
-                <ul className="space-y-2 text-gray-300">
-                  <li>• Carousel ads showcasing menu</li>
-                  <li>• Video content & Reels</li>
-                  <li>• Stories for daily engagement</li>
-                  <li>• Influencer collaborations</li>
-                </ul>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-[#E66200]/40">
-                <Smartphone className="w-12 h-12 text-[#E66200] mb-6" />
-                <h3 className="text-2xl font-bold mb-4">YouTube</h3>
-                <p className="text-gray-300 mb-4">Video Marketing</p>
-                <ul className="space-y-2 text-gray-300">
-                  <li>• Pre-roll ads targeting foodies</li>
-                  <li>• Behind-the-scenes content</li>
-                  <li>• Customer testimonials</li>
-                  <li>• Recipe videos</li>
-                </ul>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-[#E66200]/40">
-                <MessageSquare className="w-12 h-12 text-[#E66200] mb-6" />
-                <h3 className="text-2xl font-bold mb-4">Google Ads</h3>
-                <p className="text-gray-300 mb-4">Search & Display</p>
-                <ul className="space-y-2 text-gray-300">
-                  <li>• Search ads for high intent</li>
-                  <li>• Display network remarketing</li>
-                  <li>• Location-based targeting</li>
-                  <li>• Competitor keyword bidding</li>
-                </ul>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 7: Creative Content Ideas */}
-      <section className="min-h-screen flex items-center py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl md:text-6xl font-bold mb-12 text-[#E66200]">
-              Creative Content Ideas
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <img 
-                src="/little-caesars/slide-7.jpg" 
-                alt="Creative Content" 
-                className="w-full rounded-2xl shadow-xl"
-              />
               <div className="space-y-6">
-                <div className="bg-orange-50 p-6 rounded-xl border-l-4 border-[#E66200]">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">User-Generated Content</h3>
-                  <p className="text-gray-700">Encourage customers to share their "Pizza! Pizza!" moments</p>
+                <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-[#E66200]">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Post Descriptor</h3>
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    Counting change takes longer than getting a pizza here. That's Hot-N-Ready, only at Little Caesars. Stretch time? Never. Stretch cheese? Always.
+                  </p>
                 </div>
-                <div className="bg-orange-50 p-6 rounded-xl border-l-4 border-[#E66200]">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Influencer Partnerships</h3>
-                  <p className="text-gray-700">Collaborate with food bloggers and local celebrities</p>
-                </div>
-                <div className="bg-orange-50 p-6 rounded-xl border-l-4 border-[#E66200]">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Interactive Campaigns</h3>
-                  <p className="text-gray-700">Contests, polls, and quizzes to boost engagement</p>
+
+                <div className="bg-orange-50 p-6 rounded-2xl">
+                  <p className="text-sm text-gray-600">
+                    #LittleCaesars #PizzaPizza #NowInIndia #PizzaLovers #HotNReady #PizzaTime
+                  </p>
                 </div>
               </div>
             </div>
@@ -341,8 +340,8 @@ const LittleCaesarsProposal = () => {
         </div>
       </section>
 
-      {/* Section 8: Campaign Timeline */}
-      <section className="min-h-screen flex items-center py-20 bg-gradient-to-br from-gray-900 to-black text-white">
+      {/* Slide 7: Creative 4 - Story */}
+      <section className="min-h-screen flex items-center py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -350,50 +349,38 @@ const LittleCaesarsProposal = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-6xl font-bold mb-12 text-[#E66200]">
-              Campaign Timeline
-            </h2>
-            <div className="relative">
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-[#E66200]"></div>
-              
-              <div className="space-y-12">
-                <div className="flex items-center gap-8">
-                  <div className="flex-1 text-right">
-                    <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-[#E66200]/40">
-                      <h3 className="text-2xl font-bold mb-2">Month 1</h3>
-                      <p className="text-gray-300">Campaign setup, content creation, influencer onboarding</p>
-                    </div>
-                  </div>
-                  <div className="w-12 h-12 bg-[#E66200] rounded-full border-4 border-black z-10 flex items-center justify-center">
-                    <div className="w-4 h-4 bg-white rounded-full"></div>
-                  </div>
-                  <div className="flex-1"></div>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Content */}
+              <div className="space-y-6">
+                <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-[#E66200]">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Post Descriptor</h3>
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    When we say hot and ready in seconds, we mean really hot and actually seconds. That's the Little Caesars promise—hotter than the weather (well, most days).
+                  </p>
                 </div>
 
-                <div className="flex items-center gap-8">
-                  <div className="flex-1"></div>
-                  <div className="w-12 h-12 bg-[#E66200] rounded-full border-4 border-black z-10 flex items-center justify-center">
-                    <div className="w-4 h-4 bg-white rounded-full"></div>
-                  </div>
-                  <div className="flex-1">
-                    <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-[#E66200]/40">
-                      <h3 className="text-2xl font-bold mb-2">Month 2</h3>
-                      <p className="text-gray-300">Launch campaigns, optimize based on performance data</p>
-                    </div>
-                  </div>
+                <div className="bg-orange-50 p-6 rounded-2xl border-l-4 border-[#E66200]">
+                  <h3 className="text-xl font-bold text-[#E66200] mb-2">Purpose</h3>
+                  <p className="text-gray-800">Reinforce the "Hot-N-Ready" experience with quirky visuals.</p>
                 </div>
 
-                <div className="flex items-center gap-8">
-                  <div className="flex-1 text-right">
-                    <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-[#E66200]/40">
-                      <h3 className="text-2xl font-bold mb-2">Month 3</h3>
-                      <p className="text-gray-300">Scale winning campaigns, analyze ROI, plan next phase</p>
+                <div className="bg-gray-100 p-4 rounded-xl">
+                  <p className="text-sm text-gray-600">
+                    #LittleCaesars #PizzaPizza #NowInIndia #PizzaLovers #HotNReady #PizzaTime
+                  </p>
+                </div>
+              </div>
+
+              {/* Story Placeholder */}
+              <div className="relative">
+                <div className="aspect-[9/16] bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl shadow-2xl overflow-hidden flex items-center justify-center max-w-sm mx-auto">
+                  <div className="text-center p-6">
+                    <div className="w-16 h-16 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                      <span className="text-3xl">🔥</span>
                     </div>
+                    <p className="text-white/80 text-sm uppercase tracking-wider">Creative 4 - Story</p>
+                    <p className="text-white text-lg mt-2">Arc B - 15 sec</p>
                   </div>
-                  <div className="w-12 h-12 bg-[#E66200] rounded-full border-4 border-black z-10 flex items-center justify-center">
-                    <div className="w-4 h-4 bg-white rounded-full"></div>
-                  </div>
-                  <div className="flex-1"></div>
                 </div>
               </div>
             </div>
@@ -401,7 +388,7 @@ const LittleCaesarsProposal = () => {
         </div>
       </section>
 
-      {/* Section 9: Budget Breakdown */}
+      {/* Slide 8: Creative 5 - Story */}
       <section className="min-h-screen flex items-center py-20 bg-white">
         <div className="container mx-auto px-6">
           <motion.div
@@ -410,65 +397,51 @@ const LittleCaesarsProposal = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-6xl font-bold mb-12 text-[#E66200]">
-              Budget Breakdown
-            </h2>
-            <img 
-              src="/little-caesars/slide-9.jpg" 
-              alt="Budget Breakdown" 
-              className="w-full max-w-5xl mx-auto rounded-2xl shadow-2xl"
-            />
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 10: Expected Results */}
-      <section className="min-h-screen flex items-center py-20 bg-gradient-to-br from-gray-900 to-black text-white">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl md:text-6xl font-bold mb-12 text-[#E66200]">
-              Expected Results
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-[#E66200]/40">
-                <div className="text-5xl font-bold text-[#E66200] mb-4">5M+</div>
-                <p className="text-gray-300">Total Impressions</p>
-              </div>
-              
-              <div className="text-center bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-[#E66200]/40">
-                <div className="text-5xl font-bold text-[#E66200] mb-4">20%</div>
-                <p className="text-gray-300">Increase in Footfall</p>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Story Placeholder */}
+              <div className="relative">
+                <div className="aspect-[9/16] bg-gradient-to-br from-yellow-400 to-orange-500 rounded-3xl shadow-2xl overflow-hidden flex items-center justify-center max-w-sm mx-auto">
+                  <div className="text-center p-6">
+                    <div className="w-16 h-16 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                      <span className="text-3xl">⚡</span>
+                    </div>
+                    <p className="text-white/80 text-sm uppercase tracking-wider">Creative 5 - Story</p>
+                    <p className="text-white text-lg mt-2">Arc B - 15 sec</p>
+                  </div>
+                </div>
               </div>
 
-              <div className="text-center bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-[#E66200]/40">
-                <div className="text-5xl font-bold text-[#E66200] mb-4">30%</div>
-                <p className="text-gray-300">Growth in Online Orders</p>
-              </div>
+              {/* Content */}
+              <div className="space-y-6">
+                <div className="bg-orange-50 p-6 rounded-2xl border-l-4 border-[#E66200]">
+                  <h3 className="text-xl font-bold text-[#E66200] mb-2">Purpose</h3>
+                  <p className="text-gray-800">Highlight the speed and freshness of Little Caesars' pizzas, making the Hot-N-Ready promise tangible.</p>
+                </div>
 
-              <div className="text-center bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-[#E66200]/40">
-                <div className="text-5xl font-bold text-[#E66200] mb-4">3.5x</div>
-                <p className="text-gray-300">Expected ROAS</p>
+                <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-[#E66200]">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Post Descriptor</h3>
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    Before you could finish reading this caption, your pizza will be ready at Little Caesars. That's our Hot-N-Ready promise, where our pizzas don't just show up hot, they show up now.
+                  </p>
+                </div>
+
+                <div className="bg-gray-100 p-4 rounded-xl">
+                  <p className="text-sm text-gray-600">
+                    #LittleCaesars #PizzaPizza #NowInIndia #PizzaLovers #HotNReady #PizzaTime
+                  </p>
+                </div>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Section 11: Let's Make It Happen */}
-      <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#E66200] to-[#FF8533] text-white relative overflow-hidden">
+      {/* Slide 9: How Do We Do It? - Interactive Story */}
+      <section className="min-h-screen flex items-center py-20 bg-gradient-to-br from-[#E66200] to-[#FF8533] text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <img 
-            src="/little-caesars/slide-11.jpg" 
-            alt="Background" 
-            className="w-full h-full object-cover"
-          />
+          <img src="/little-caesars/bg-ingredients.jpg" alt="" className="w-full h-full object-cover" />
         </div>
-        <div className="container mx-auto px-6 text-center relative z-10">
+        <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -476,31 +449,391 @@ const LittleCaesarsProposal = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-5xl md:text-7xl font-bold mb-8">
-              Let's Make It Happen!
+              How Do We Do It?
             </h2>
-            <p className="text-2xl mb-12 max-w-3xl mx-auto opacity-90">
-              Partner with Chaar Log to bring Little Caesars' "Pizza! Pizza!" magic to 
-              millions of Indian pizza lovers through strategic, creative, and data-driven 
-              digital marketing.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a 
-                href="mailto:contact@chaarlog.com"
-                className="inline-flex items-center gap-2 bg-white text-[#E66200] px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all transform hover:scale-105"
-              >
-                Get Started
-                <ArrowRight className="w-5 h-5" />
-              </a>
-              <a 
-                href="tel:+919876543210"
-                className="inline-flex items-center gap-2 bg-black text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-900 transition-all transform hover:scale-105"
-              >
-                Schedule a Call
-              </a>
+            <p className="text-3xl mb-12 font-light">Fresh dough, vine-ripened tomatoes, and cheese that makes you swoon</p>
+            
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Story Placeholder with Interactive Element */}
+              <div className="relative">
+                <div className="aspect-[9/16] bg-gradient-to-br from-green-600 to-green-800 rounded-3xl shadow-2xl overflow-hidden flex items-center justify-center max-w-sm mx-auto border-4 border-white/30">
+                  <div className="text-center p-6">
+                    <div className="w-16 h-16 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                      <span className="text-3xl">🎯</span>
+                    </div>
+                    <p className="text-white/80 text-sm uppercase tracking-wider">Creative 6 - Interactive Story</p>
+                    <p className="text-white text-lg mt-2">Arc A - 15 sec</p>
+                    <p className="text-white/70 text-sm mt-4">with poll/quiz/slider</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="space-y-6">
+                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/30">
+                  <h3 className="text-xl font-bold mb-2">Purpose</h3>
+                  <p className="text-white/90">Educate viewers about Little Caesars' fresh ingredients in a fun, engaging way.</p>
+                </div>
+
+                <div className="bg-white text-gray-900 p-8 rounded-2xl shadow-2xl">
+                  <h3 className="text-2xl font-bold mb-4">Post Descriptor</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Some secrets shouldn't stay in the kitchen. At Little Caesars, every pizza starts with dough made fresh in-house, topped with vine-ripened tomatoes' sauce, and finished with 100% real cheese. No shortcuts. No compromises. Just fresh, honest pizza—always Hot-N-Ready.
+                  </p>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
+                  <p className="text-sm text-white/80">
+                    #MadeFreshDaily #LittleCaesarsIndia #PizzaPizza #PizzaLovers #HotNReady #PizzaTime
+                  </p>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
       </section>
+
+      {/* Slide 10: Why Should You Care? - Carousel */}
+      <section className="min-h-screen flex items-center py-20 bg-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <img src="/little-caesars/bg-dining.jpg" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="container mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-5xl md:text-7xl font-bold mb-8 text-[#E66200]">
+              Why Should You Care?
+            </h2>
+            <p className="text-3xl text-gray-800 mb-12 font-semibold">Coz all roads lead to Little Caesars</p>
+            
+            <div className="grid md:grid-cols-2 gap-12 items-start">
+              {/* Carousel Placeholder */}
+              <div className="relative">
+                <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl shadow-2xl p-8">
+                  <div className="aspect-square bg-gradient-to-br from-[#E66200]/20 to-[#FF8533]/20 rounded-2xl flex items-center justify-center mb-6">
+                    <div className="text-center">
+                      <div className="text-white/80 text-6xl mb-4">📸</div>
+                      <p className="text-white/80 text-sm uppercase tracking-wider">Creative 7 - Carousel</p>
+                      <p className="text-white text-lg mt-2">7 frames</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <button className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-colors">
+                      <ChevronLeft className="w-6 h-6 text-white" />
+                    </button>
+                    <div className="flex gap-2">
+                      {[1,2,3,4,5,6,7].map((i) => (
+                        <div key={i} className={`w-2 h-2 rounded-full ${i === 1 ? 'bg-[#E66200]' : 'bg-white/30'}`} />
+                      ))}
+                    </div>
+                    <button className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-colors">
+                      <ChevronRight className="w-6 h-6 text-white" />
+                    </button>
+                  </div>
+                </div>
+                <div className="mt-4 bg-[#E66200] text-white px-4 py-2 rounded-lg inline-block">
+                  <p className="font-semibold">Format: Carousel (7 frames)</p>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="space-y-6">
+                <div className="bg-orange-50 p-6 rounded-2xl border-l-4 border-[#E66200]">
+                  <h3 className="text-xl font-bold text-[#E66200] mb-2">Purpose</h3>
+                  <p className="text-gray-800">Highlight the dine-in experience, showcasing pizza moments and social enjoyment.</p>
+                </div>
+
+                <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-[#E66200]">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Post Descriptor</h3>
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    Flat slice or folded slice? Pineapple or no pineapple? Last-slice fighter or first-slice snatcher? Whoever yo are, you'll always find a table at Little Caesars. We don't judge. We just serve. And we'll be serving from June 22.
+                  </p>
+                </div>
+
+                <div className="bg-gray-100 p-4 rounded-xl">
+                  <p className="text-sm text-gray-600">
+                    #LittleCaesarsIndia #PizzaPizza #PizzaLovers #HotNReady #PizzaTime
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Slide 11: Where Are We Coming To? */}
+      <section className="min-h-screen flex items-center py-20 bg-gradient-to-br from-gray-900 to-black text-white">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-5xl md:text-7xl font-bold mb-12 text-[#E66200]">
+              Where Are We Coming To?
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Content */}
+              <div className="space-y-6">
+                <div className="bg-[#E66200]/20 p-6 rounded-2xl border-l-4 border-[#E66200]">
+                  <h3 className="text-xl font-bold text-[#E66200] mb-2">Purpose</h3>
+                  <p className="text-white/90">Engage audiences with the store location story and make them curious to visit.</p>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl border border-white/20">
+                  <h3 className="text-2xl font-bold mb-4">Post Descriptor</h3>
+                  <p className="text-white/90 leading-relaxed">
+                    Forget the lip and sip metaphor, the distance between a craving and your first bite is how you measure distance. In other words, how far is your current location from our first location on Golf Course Road, Gurugram. Find out with just a click.
+                  </p>
+                </div>
+
+                <div className="bg-white/5 p-4 rounded-xl">
+                  <p className="text-sm text-white/60">
+                    #LittleCaesarsIndia #PizzaPizza #PizzaLovers #HotNReady #PizzaTime #GurugramGrub #GolfCourseRoad
+                  </p>
+                </div>
+
+                <div className="bg-green-600/20 border border-green-500/30 p-4 rounded-xl">
+                  <p className="text-sm text-green-300">
+                    💡 Interactive Element: Clicking the link opens Google Maps, showing the exact distance from their current location to the store.
+                  </p>
+                </div>
+              </div>
+
+              {/* Story Placeholder with Interactive */}
+              <div className="relative">
+                <div className="aspect-[9/16] bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl shadow-2xl overflow-hidden flex items-center justify-center max-w-sm mx-auto border-4 border-[#E66200]/30">
+                  <div className="text-center p-6">
+                    <div className="w-16 h-16 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                      <span className="text-3xl">📍</span>
+                    </div>
+                    <p className="text-white/80 text-sm uppercase tracking-wider">Creative 8 - Interactive Story</p>
+                    <p className="text-white text-lg mt-2">Arc A - 15 sec</p>
+                    <p className="text-white/70 text-sm mt-4">with location element</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Slide 12: When Are We Coming? */}
+      <section className="min-h-screen flex items-center py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-5xl md:text-7xl font-bold mb-12 text-[#E66200]">
+              When Are We Coming?
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Story Placeholder with Interactive */}
+              <div className="relative">
+                <div className="aspect-[9/16] bg-gradient-to-br from-[#E66200] to-[#FF8533] rounded-3xl shadow-2xl overflow-hidden flex items-center justify-center max-w-sm mx-auto border-4 border-yellow-400/50">
+                  <div className="text-center p-6">
+                    <div className="w-24 h-24 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                      <span className="text-5xl">📅</span>
+                    </div>
+                    <p className="text-white/80 text-sm uppercase tracking-wider">Creative 9 - Interactive Story</p>
+                    <p className="text-white text-lg mt-2">Arc A - 15 sec</p>
+                    <div className="mt-6 bg-white text-[#E66200] px-6 py-3 rounded-full inline-block">
+                      <p className="text-3xl font-bold">JUNE 22</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="space-y-6">
+                <div className="bg-orange-50 p-6 rounded-2xl border-l-4 border-[#E66200]">
+                  <h3 className="text-xl font-bold text-[#E66200] mb-2">Purpose</h3>
+                  <p className="text-gray-800">Build excitement and anticipation around the launch date.</p>
+                </div>
+
+                <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-[#E66200]">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Post Descriptor</h3>
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    June 22. Just another date… or so we thought. No history, no fanfare, no reason to remember it. Until now. Because this is the day Little Caesars lands in India. Suddenly, it's very, very special.
+                  </p>
+                </div>
+
+                <div className="bg-gray-100 p-4 rounded-xl">
+                  <p className="text-sm text-gray-600">
+                    #LittleCaesarsIndia #PizzaPizza #PizzaLovers #HotNReady #PizzaTime
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Slide 13: Countdown */}
+      <section className="min-h-screen flex items-center py-20 bg-gradient-to-br from-[#E66200] to-[#FF8533] text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <img src="/little-caesars/bg-countdown.jpg" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="container mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-5xl md:text-7xl font-bold mb-12 text-center">
+              Countdown
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-12 items-start">
+              {/* Static/GIF Placeholders */}
+              <div className="space-y-6">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/30">
+                  <div className="aspect-square bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mb-4">
+                    <div className="text-center">
+                      <p className="text-6xl font-bold text-white mb-2">10</p>
+                      <p className="text-white/80 text-xl">Days to Go</p>
+                    </div>
+                  </div>
+                  <p className="text-center text-white/70">Creative 10 - Static/GIF</p>
+                </div>
+
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-white/5 rounded-xl p-4 text-center">
+                    <p className="text-2xl font-bold mb-1">🍕 6</p>
+                    <p className="text-sm">Pizza Slices</p>
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 text-center">
+                    <p className="text-2xl font-bold mb-1">👊 5</p>
+                    <p className="text-sm">Crazy Punches</p>
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 text-center">
+                    <p className="text-2xl font-bold mb-1">🍕 3</p>
+                    <p className="text-sm">Half a Pizza</p>
+                  </div>
+                  <div className="bg-white/5 rounded-xl p-4 text-center">
+                    <p className="text-2xl font-bold mb-1">🍰 2</p>
+                    <p className="text-sm">Dessert Cups</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="space-y-6">
+                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/30">
+                  <h3 className="text-xl font-bold mb-2">Purpose</h3>
+                  <p className="text-white/90">Amplify launch excitement and reinforce countdown messaging.</p>
+                </div>
+
+                <div className="bg-white text-gray-900 p-8 rounded-2xl shadow-2xl">
+                  <h3 className="text-2xl font-bold mb-4">Post Descriptor</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    The wait is over, nearly. Well, 10 more days to go, precisely. And we can't wait to serve you your first slice of Little Caesars Pizza, and our Potato wedges too. Hope you're as excited. See you there.
+                  </p>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
+                  <p className="text-sm text-white/80">
+                    #LittleCaesarsIndia #PizzaPizza #PizzaLovers #HotNReady #PizzaTime
+                  </p>
+                </div>
+
+                <div className="bg-white/5 p-4 rounded-xl">
+                  <p className="text-white/70 text-sm">
+                    <strong>Format:</strong> Static/GIF – product hero or offer articulation
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Slide 14: Summary */}
+      <section className="min-h-screen flex items-center py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-5xl md:text-7xl font-bold mb-12 text-center text-[#E66200]">
+              The Summary
+            </h2>
+            
+            <div className="max-w-4xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-6 mb-12">
+                <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl border-l-4 border-green-500">
+                  <p className="text-xl text-gray-800 font-semibold">
+                    ✅ Brand legacy & identity introduced
+                  </p>
+                </div>
+                <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl border-l-4 border-blue-500">
+                  <p className="text-xl text-gray-800 font-semibold">
+                    ✅ Hot-N-Ready promise highlighted
+                  </p>
+                </div>
+                <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-2xl border-l-4 border-purple-500">
+                  <p className="text-xl text-gray-800 font-semibold">
+                    ✅ Fresh ingredients & USP explained
+                  </p>
+                </div>
+                <div className="bg-gradient-to-br from-pink-50 to-pink-100 p-8 rounded-2xl border-l-4 border-pink-500">
+                  <p className="text-xl text-gray-800 font-semibold">
+                    ✅ Interactive quizzes & stories included
+                  </p>
+                </div>
+                <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-2xl border-l-4 border-yellow-500">
+                  <p className="text-xl text-gray-800 font-semibold">
+                    ✅ Launch date & store location revealed
+                  </p>
+                </div>
+                <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl border-l-4 border-[#E66200]">
+                  <p className="text-xl text-gray-800 font-semibold">
+                    ✅ Humor, quirk, and memorability baked in
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-[#E66200] to-[#FF8533] text-white p-12 rounded-3xl shadow-2xl text-center">
+                <p className="text-3xl md:text-4xl font-bold leading-relaxed">
+                  So, hopefully India won't just meet Little Caesars,<br/>
+                  they'll remember it.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="container mx-auto px-6 text-center">
+          <div className="flex items-center justify-center gap-8 mb-6">
+            <Logo />
+            <span className="text-2xl text-gray-600">×</span>
+            <img 
+              src="/little-caesars/little-caesars-logo.svg" 
+              alt="Little Caesars" 
+              className="h-12"
+            />
+          </div>
+          <p className="text-gray-400">
+            Chaar Log Digital Marketing Agency | Creative Strategy for Little Caesars India
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
