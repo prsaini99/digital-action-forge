@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -23,7 +23,45 @@ import NriStrategy from "./pages/NriStrategy";
 import NriProposal from "./pages/NriProposal";
 import NriProjects from "./pages/NriProjects";
 
+// Proposals
+import LittleCaesarsProposal from "./pages/LittleCaesarsProposal";
+
 const queryClient = new QueryClient();
+
+const AppContent = () => {
+  const location = useLocation();
+  const isProposalPage = location.pathname.startsWith('/proposals/');
+  
+  return (
+    <>
+      <ScrollToTop />
+      {!isProposalPage && <Navbar />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/services/:serviceId" element={<ServiceDetail />} />
+        <Route path="/case-studies" element={<CaseStudies />} />
+        <Route path="/case-studies/:caseStudyId" element={<CaseStudyDetail />} />
+        <Route path="/contact" element={<Contact />} />
+        
+        {/* NRI Portal Routes - still accessible but no navigation to them */}
+        <Route path="/nri-portal" element={<NriPortal />} />
+        <Route path="/nri-portal/research" element={<NriResearch />} />
+        <Route path="/nri-portal/strategy" element={<NriStrategy />} />
+        <Route path="/nri-portal/proposal" element={<NriProposal />} />
+        <Route path="/nri-portal/projects" element={<NriProjects />} />
+        
+        {/* Proposal Pages - no navigation from main site */}
+        <Route path="/proposals/little-caesars" element={<LittleCaesarsProposal />} />
+        
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      {!isProposalPage && <Footer />}
+    </>
+  );
+};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -31,28 +69,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <ScrollToTop />
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/services/:serviceId" element={<ServiceDetail />} />
-          <Route path="/case-studies" element={<CaseStudies />} />
-          <Route path="/case-studies/:caseStudyId" element={<CaseStudyDetail />} />
-          <Route path="/contact" element={<Contact />} />
-          
-          {/* NRI Portal Routes - still accessible but no navigation to them */}
-          <Route path="/nri-portal" element={<NriPortal />} />
-          <Route path="/nri-portal/research" element={<NriResearch />} />
-          <Route path="/nri-portal/strategy" element={<NriStrategy />} />
-          <Route path="/nri-portal/proposal" element={<NriProposal />} />
-          <Route path="/nri-portal/projects" element={<NriProjects />} />
-          
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-        <Footer />
+        <AppContent />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
