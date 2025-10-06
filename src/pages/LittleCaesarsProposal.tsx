@@ -19,13 +19,6 @@ const LittleCaesarsProposal = () => {
 
       {/* Section 1: Cover Slide */}
       <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#E66200] to-[#FF8533] text-white relative overflow-hidden pt-20">
-        <div className="absolute inset-0 opacity-10">
-          <img 
-            src="/little-caesars/slide-1.jpg" 
-            alt="Background" 
-            className="w-full h-full object-cover"
-          />
-        </div>
         <div className="container mx-auto px-6 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -35,7 +28,7 @@ const LittleCaesarsProposal = () => {
             <img 
               src="/little-caesars/logo.jpg" 
               alt="Little Caesars" 
-              className="w-48 h-48 mx-auto mb-8 rounded-full shadow-2xl"
+              className="w-48 h-48 mx-auto mb-8 shadow-2xl"
             />
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               Creative Digital Marketing Strategy
