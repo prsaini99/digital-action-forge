@@ -666,19 +666,17 @@ const LittleCaesarsProposal = () => {
             </h2>
             
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Story Placeholder with Interactive */}
+              {/* Story Video with Interactive */}
               <div className="relative">
-                <div className="aspect-[9/16] bg-gradient-to-br from-[#E66200] to-[#FF8533] rounded-3xl shadow-2xl overflow-hidden flex items-center justify-center max-w-sm mx-auto border-4 border-yellow-400/50">
-                  <div className="text-center p-6">
-                    <div className="w-24 h-24 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-5xl">📅</span>
-                    </div>
-                    <p className="text-white/80 text-sm uppercase tracking-wider">Creative 9 - Interactive Story</p>
-                    <p className="text-white text-lg mt-2">Arc A - 15 sec</p>
-                    <div className="mt-6 bg-white text-[#E66200] px-6 py-3 rounded-full inline-block">
-                      <p className="text-3xl font-bold">JUNE 22</p>
-                    </div>
-                  </div>
+                <div className="rounded-3xl shadow-2xl overflow-hidden max-w-sm mx-auto border-4 border-yellow-400/50" style={{ padding: '177.78% 0 0 0', position: 'relative' }}>
+                  <iframe 
+                    src="https://player.vimeo.com/video/1125060034?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" 
+                    frameBorder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                    referrerPolicy="strict-origin-when-cross-origin" 
+                    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} 
+                    title="Creative 9"
+                  />
                 </div>
               </div>
 
