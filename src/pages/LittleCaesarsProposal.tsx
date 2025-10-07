@@ -167,22 +167,22 @@ const LittleCaesarsProposal = () => {
       </section>
 
       {/* Slide 4: Who's This Mysterious Pie Master? */}
-      <section className="min-h-screen flex items-center py-8 bg-white">
-        <div className="container mx-auto px-6 max-w-7xl">
+      <section className="min-h-screen flex items-center py-4 bg-white">
+        <div className="container mx-auto px-6 max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#E66200]">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#E66200]">
               Who's This Mysterious Pie Master?
             </h2>
             
-            <div className="grid md:grid-cols-2 gap-8 items-start">
+            <div className="grid md:grid-cols-2 gap-6 items-start">
               {/* Video */}
               <div className="relative">
-                <div className="rounded-2xl shadow-2xl overflow-hidden" style={{ padding: '177.78% 0 0 0', position: 'relative' }}>
+                <div className="rounded-2xl shadow-2xl overflow-hidden max-w-xs mx-auto" style={{ padding: '177.78% 0 0 0', position: 'relative' }}>
                   <iframe 
                     src="https://player.vimeo.com/video/1125059926?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" 
                     frameBorder="0" 
@@ -192,7 +192,7 @@ const LittleCaesarsProposal = () => {
                     title="Creative 1"
                   />
                 </div>
-                <div className="mt-3 bg-[#E66200] text-white px-3 py-1.5 rounded-lg inline-block text-sm">
+                <div className="mt-2 bg-[#E66200] text-white px-3 py-1.5 rounded-lg inline-block text-sm">
                   <p className="font-semibold">Format: 15–20 sec Reel</p>
                 </div>
               </div>
@@ -232,15 +232,15 @@ const LittleCaesarsProposal = () => {
       </section>
 
       {/* Slide 5: Creative 2 */}
-      <section className="min-h-screen flex items-center py-8 bg-gradient-to-br from-gray-900 to-black text-white">
-        <div className="container mx-auto px-6 max-w-7xl">
+      <section className="min-h-screen flex items-center py-4 bg-gradient-to-br from-gray-900 to-black text-white">
+        <div className="container mx-auto px-6 max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="grid md:grid-cols-2 gap-8 items-start">
+            <div className="grid md:grid-cols-2 gap-6 items-start">
               {/* Post Content */}
               <div className="space-y-4">
                 <div className="bg-[#E66200]/20 p-4 rounded-xl border-l-4 border-[#E66200]">
@@ -276,7 +276,7 @@ const LittleCaesarsProposal = () => {
 
               {/* Video */}
               <div className="relative">
-                <div className="rounded-2xl shadow-2xl overflow-hidden" style={{ padding: '177.78% 0 0 0', position: 'relative' }}>
+                <div className="rounded-2xl shadow-2xl overflow-hidden max-w-xs mx-auto" style={{ padding: '177.78% 0 0 0', position: 'relative' }}>
                   <iframe 
                     src="https://player.vimeo.com/video/1125059944?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" 
                     frameBorder="0" 
@@ -286,7 +286,7 @@ const LittleCaesarsProposal = () => {
                     title="Creative 2"
                   />
                 </div>
-                <div className="mt-3 bg-white text-[#E66200] px-3 py-1.5 rounded-lg inline-block text-sm">
+                <div className="mt-2 bg-white text-[#E66200] px-3 py-1.5 rounded-lg inline-block text-sm">
                   <p className="font-semibold">Format: 30–40 sec Reel</p>
                 </div>
               </div>
@@ -296,7 +296,7 @@ const LittleCaesarsProposal = () => {
       </section>
 
       {/* Slide 6: What Do We Do? - Hot-N-Ready */}
-      <section className="min-h-screen flex items-center py-10 bg-white relative overflow-hidden">
+      <section className="min-h-screen flex items-center py-4 bg-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <img src="/little-caesars/bg-ingredients.jpg" alt="" className="w-full h-full object-cover" />
         </div>
@@ -348,7 +348,7 @@ const LittleCaesarsProposal = () => {
       </section>
 
       {/* Slide 7: Creative 4 - Story */}
-      <section className="min-h-screen flex items-center py-10 bg-gray-50">
+      <section className="min-h-screen flex items-center py-4 bg-gray-50">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -397,7 +397,7 @@ const LittleCaesarsProposal = () => {
       </section>
 
       {/* Slide 8: Creative 5 - Story */}
-      <section className="min-h-screen flex items-center py-10 bg-white">
+      <section className="min-h-screen flex items-center py-4 bg-white">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -446,7 +446,7 @@ const LittleCaesarsProposal = () => {
       </section>
 
       {/* Slide 9: How Do We Do It? - Interactive Story */}
-      <section className="min-h-screen flex items-center py-10 bg-gradient-to-br from-[#E66200] to-[#FF8533] text-white relative overflow-hidden">
+      <section className="min-h-screen flex items-center py-4 bg-gradient-to-br from-[#E66200] to-[#FF8533] text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img src="/little-caesars/bg-ingredients.jpg" alt="" className="w-full h-full object-cover" />
         </div>
@@ -503,7 +503,7 @@ const LittleCaesarsProposal = () => {
       </section>
 
       {/* Slide 10: Why Should You Care? - Carousel */}
-      <section className="min-h-screen flex items-center py-10 bg-white relative overflow-hidden">
+      <section className="min-h-screen flex items-center py-4 bg-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <img src="/little-caesars/bg-dining.jpg" alt="" className="w-full h-full object-cover" />
         </div>
@@ -594,7 +594,7 @@ const LittleCaesarsProposal = () => {
       </section>
 
       {/* Slide 11: Where Are We Coming To? */}
-      <section className="min-h-screen flex items-center py-10 bg-gradient-to-br from-gray-900 to-black text-white">
+      <section className="min-h-screen flex items-center py-4 bg-gradient-to-br from-gray-900 to-black text-white">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -653,7 +653,7 @@ const LittleCaesarsProposal = () => {
       </section>
 
       {/* Slide 12: When Are We Coming? */}
-      <section className="min-h-screen flex items-center py-10 bg-white">
+      <section className="min-h-screen flex items-center py-4 bg-white">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -706,7 +706,7 @@ const LittleCaesarsProposal = () => {
       </section>
 
       {/* Slide 13: Countdown */}
-      <section className="min-h-screen flex items-center py-10 bg-gradient-to-br from-[#E66200] to-[#FF8533] text-white relative overflow-hidden">
+      <section className="min-h-screen flex items-center py-4 bg-gradient-to-br from-[#E66200] to-[#FF8533] text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <img src="/little-caesars/bg-countdown.jpg" alt="" className="w-full h-full object-cover" />
         </div>
