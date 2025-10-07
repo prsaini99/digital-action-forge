@@ -793,7 +793,7 @@ const LittleCaesarsProposal = () => {
               We Also Went An Extra Mile
             </h2>
             
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-lg mx-auto">
               <Carousel className="w-full">
                 <CarouselContent>
                   <CarouselItem>
