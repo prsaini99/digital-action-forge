@@ -780,7 +780,77 @@ const LittleCaesarsProposal = () => {
         </div>
       </section>
 
-      {/* Slide 14: Summary */}
+      {/* Slide 14: We Also Went An Extra Mile */}
+      <section className="min-h-screen flex items-center py-20 bg-gradient-to-br from-gray-900 to-black text-white">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-5xl md:text-7xl font-bold mb-12 text-center text-[#E66200]">
+              We Also Went An Extra Mile
+            </h2>
+            
+            <div className="max-w-4xl mx-auto">
+              <Carousel className="w-full">
+                <CarouselContent>
+                  <CarouselItem>
+                    <div className="rounded-2xl overflow-hidden shadow-2xl">
+                      <img 
+                        src="/little-caesars/extra-mile-1.png" 
+                        alt="Big or small, every win deserves a pizza" 
+                        className="w-full h-auto"
+                      />
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="rounded-2xl overflow-hidden shadow-2xl">
+                      <img 
+                        src="/little-caesars/extra-mile-2.png" 
+                        alt="Found a seat in the metro when you needed it most? Time to celebrate!" 
+                        className="w-full h-auto"
+                      />
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="rounded-2xl overflow-hidden shadow-2xl">
+                      <img 
+                        src="/little-caesars/extra-mile-3.png" 
+                        alt="Beat the city traffic and reached home on time? Time to celebrate!" 
+                        className="w-full h-auto"
+                      />
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="rounded-2xl overflow-hidden shadow-2xl">
+                      <img 
+                        src="/little-caesars/extra-mile-4.png" 
+                        alt="Scored that long-awaited goal in practice? Time to celebrate!" 
+                        className="w-full h-auto"
+                      />
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="rounded-2xl overflow-hidden shadow-2xl">
+                      <img 
+                        src="/little-caesars/extra-mile-5.png" 
+                        alt="Life's little victories are best enjoyed together with pizza from Little Caesars" 
+                        className="w-full h-auto"
+                      />
+                    </div>
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious className="left-4" />
+                <CarouselNext className="right-4" />
+              </Carousel>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Slide 15: Summary */}
       <section className="min-h-screen flex items-center py-20 bg-white">
         <div className="container mx-auto px-6">
           <motion.div
