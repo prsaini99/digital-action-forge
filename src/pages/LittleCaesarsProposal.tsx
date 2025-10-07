@@ -180,14 +180,17 @@ const LittleCaesarsProposal = () => {
             </h2>
             
             <div className="grid md:grid-cols-2 gap-12 items-start">
-              {/* Video Placeholder */}
+              {/* Video */}
               <div className="relative">
-                <div className="aspect-[9/16] bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl shadow-2xl overflow-hidden flex items-center justify-center">
-                  <div className="text-center">
-                    <Play className="w-20 h-20 text-white/80 mx-auto mb-4" />
-                    <p className="text-white/60 text-sm uppercase tracking-wider">Creative 1 - Reel</p>
-                    <p className="text-white/80 text-lg mt-2">15-20 sec Video</p>
-                  </div>
+                <div className="rounded-3xl shadow-2xl overflow-hidden" style={{ padding: '177.78% 0 0 0', position: 'relative' }}>
+                  <iframe 
+                    src="https://player.vimeo.com/video/1125059926?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1" 
+                    frameBorder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                    referrerPolicy="strict-origin-when-cross-origin" 
+                    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} 
+                    title="Creative 1"
+                  />
                 </div>
                 <div className="mt-4 bg-[#E66200] text-white px-4 py-2 rounded-lg inline-block">
                   <p className="font-semibold">Format: 15–20 sec Reel</p>
