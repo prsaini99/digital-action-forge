@@ -520,30 +520,49 @@ const LittleCaesarsProposal = () => {
             <p className="text-3xl text-gray-800 mb-12 font-semibold">Coz all roads lead to Little Caesars</p>
             
             <div className="grid md:grid-cols-2 gap-12 items-start">
-              {/* Carousel Placeholder */}
+              {/* Carousel */}
               <div className="relative">
-                <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-3xl shadow-2xl p-8">
-                  <div className="aspect-square bg-gradient-to-br from-[#E66200]/20 to-[#FF8533]/20 rounded-2xl flex items-center justify-center mb-6">
-                    <div className="text-center">
-                      <div className="text-white/80 text-6xl mb-4">📸</div>
-                      <p className="text-white/80 text-sm uppercase tracking-wider">Creative 7 - Carousel</p>
-                      <p className="text-white text-lg mt-2">7 frames</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <button className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-colors">
-                      <ChevronLeft className="w-6 h-6 text-white" />
-                    </button>
-                    <div className="flex gap-2">
-                      {[1,2,3,4,5,6,7].map((i) => (
-                        <div key={i} className={`w-2 h-2 rounded-full ${i === 1 ? 'bg-[#E66200]' : 'bg-white/30'}`} />
-                      ))}
-                    </div>
-                    <button className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-colors">
-                      <ChevronRight className="w-6 h-6 text-white" />
-                    </button>
-                  </div>
-                </div>
+                <Carousel className="w-full max-w-lg mx-auto">
+                  <CarouselContent>
+                    <CarouselItem>
+                      <div className="aspect-square rounded-2xl overflow-hidden">
+                        <img src="/little-caesars/carousel-1.jpg" alt="There are two types of people in the world" className="w-full h-full object-cover" />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="aspect-square rounded-2xl overflow-hidden">
+                        <img src="/little-caesars/carousel-2.jpg" alt="Seasoning vs Sauces" className="w-full h-full object-cover" />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="aspect-square rounded-2xl overflow-hidden">
+                        <img src="/little-caesars/carousel-3.jpg" alt="Pizza toppings comparison" className="w-full h-full object-cover" />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="aspect-square rounded-2xl overflow-hidden">
+                        <img src="/little-caesars/carousel-4.jpg" alt="Shapes comparison" className="w-full h-full object-cover" />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="aspect-square rounded-2xl overflow-hidden">
+                        <img src="/little-caesars/carousel-5.jpg" alt="Pizza box styles" className="w-full h-full object-cover" />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="aspect-square rounded-2xl overflow-hidden">
+                        <img src="/little-caesars/carousel-6.jpg" alt="Dining tables" className="w-full h-full object-cover" />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="aspect-square rounded-2xl overflow-hidden">
+                        <img src="/little-caesars/carousel-7.jpg" alt="All coming to Little Caesars on 22 June" className="w-full h-full object-cover" />
+                      </div>
+                    </CarouselItem>
+                  </CarouselContent>
+                  <CarouselPrevious className="left-4" />
+                  <CarouselNext className="right-4" />
+                </Carousel>
                 <div className="mt-4 bg-[#E66200] text-white px-4 py-2 rounded-lg inline-block">
                   <p className="font-semibold">Format: Carousel (7 frames)</p>
                 </div>
