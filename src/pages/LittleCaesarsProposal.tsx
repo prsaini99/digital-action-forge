@@ -722,35 +722,30 @@ const LittleCaesarsProposal = () => {
             </h2>
             
             <div className="grid md:grid-cols-2 gap-12 items-start">
-              {/* Static/GIF Placeholders */}
+              {/* Countdown Carousel */}
               <div className="space-y-6">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/30">
-                  <div className="aspect-square bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mb-4">
-                    <div className="text-center">
-                      <p className="text-6xl font-bold text-white mb-2">10</p>
-                      <p className="text-white/80 text-xl">Days to Go</p>
-                    </div>
-                  </div>
-                  <p className="text-center text-white/70">Creative 10 - Static/GIF</p>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-white/5 rounded-xl p-4 text-center">
-                    <p className="text-2xl font-bold mb-1">🍕 6</p>
-                    <p className="text-sm">Pizza Slices</p>
-                  </div>
-                  <div className="bg-white/5 rounded-xl p-4 text-center">
-                    <p className="text-2xl font-bold mb-1">👊 5</p>
-                    <p className="text-sm">Crazy Punches</p>
-                  </div>
-                  <div className="bg-white/5 rounded-xl p-4 text-center">
-                    <p className="text-2xl font-bold mb-1">🍕 3</p>
-                    <p className="text-sm">Half a Pizza</p>
-                  </div>
-                  <div className="bg-white/5 rounded-xl p-4 text-center">
-                    <p className="text-2xl font-bold mb-1">🍰 2</p>
-                    <p className="text-sm">Dessert Cups</p>
-                  </div>
+                  <Carousel className="w-full max-w-xl mx-auto">
+                    <CarouselContent>
+                      <CarouselItem>
+                        <img 
+                          src="/little-caesars/countdown-10-days.jpg" 
+                          alt="10 Days to Go - Potato Wedges"
+                          className="w-full h-auto rounded-xl"
+                        />
+                      </CarouselItem>
+                      <CarouselItem>
+                        <img 
+                          src="/little-caesars/countdown-4-days.jpg" 
+                          alt="4 Days to Go - Stuffed Garlic Bread"
+                          className="w-full h-auto rounded-xl"
+                        />
+                      </CarouselItem>
+                    </CarouselContent>
+                    <CarouselPrevious className="left-2" />
+                    <CarouselNext className="right-2" />
+                  </Carousel>
+                  <p className="text-center text-white/70 mt-4">Creative 10 - Countdown Static</p>
                 </div>
               </div>
 
