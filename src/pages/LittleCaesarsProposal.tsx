@@ -179,7 +179,7 @@ const LittleCaesarsProposal = () => {
               Who's This Mysterious Pie Master?
             </h2>
             
-            <div className="grid md:grid-cols-2 gap-6 items-start">
+            <div className="grid md:grid-cols-2 gap-6 items-center">
               {/* Video */}
               <div className="relative">
                 <div className="rounded-2xl shadow-2xl overflow-hidden max-w-xs mx-auto" style={{ padding: '177.78% 0 0 0', position: 'relative' }}>
