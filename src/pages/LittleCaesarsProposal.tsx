@@ -378,16 +378,17 @@ const LittleCaesarsProposal = () => {
                 </div>
               </div>
 
-              {/* Story Placeholder */}
+              {/* Story Video */}
               <div className="relative">
-                <div className="aspect-[9/16] bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl shadow-2xl overflow-hidden flex items-center justify-center max-w-sm mx-auto">
-                  <div className="text-center p-6">
-                    <div className="w-16 h-16 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-3xl">🔥</span>
-                    </div>
-                    <p className="text-white/80 text-sm uppercase tracking-wider">Creative 4 - Story</p>
-                    <p className="text-white text-lg mt-2">Arc B - 15 sec</p>
-                  </div>
+                <div className="rounded-3xl shadow-2xl overflow-hidden max-w-sm mx-auto" style={{ padding: '177.78% 0 0 0', position: 'relative' }}>
+                  <iframe 
+                    src="https://player.vimeo.com/video/1125060001?badge=0&autopause=0&player_id=0&app_id=58479" 
+                    frameBorder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                    referrerPolicy="strict-origin-when-cross-origin" 
+                    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} 
+                    title="Creative 4.1"
+                  />
                 </div>
               </div>
             </div>
