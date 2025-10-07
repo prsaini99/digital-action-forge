@@ -634,17 +634,17 @@ const LittleCaesarsProposal = () => {
                 </div>
               </div>
 
-              {/* Story Placeholder with Interactive */}
+              {/* Story Video with Interactive */}
               <div className="relative">
-                <div className="aspect-[9/16] bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl shadow-2xl overflow-hidden flex items-center justify-center max-w-sm mx-auto border-4 border-[#E66200]/30">
-                  <div className="text-center p-6">
-                    <div className="w-16 h-16 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-3xl">📍</span>
-                    </div>
-                    <p className="text-white/80 text-sm uppercase tracking-wider">Creative 8 - Interactive Story</p>
-                    <p className="text-white text-lg mt-2">Arc A - 15 sec</p>
-                    <p className="text-white/70 text-sm mt-4">with location element</p>
-                  </div>
+                <div className="rounded-3xl shadow-2xl overflow-hidden max-w-sm mx-auto border-4 border-[#E66200]/30" style={{ padding: '177.78% 0 0 0', position: 'relative' }}>
+                  <iframe 
+                    src="https://player.vimeo.com/video/1125060042?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0" 
+                    frameBorder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                    referrerPolicy="strict-origin-when-cross-origin" 
+                    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} 
+                    title="Creative 8"
+                  />
                 </div>
               </div>
             </div>
