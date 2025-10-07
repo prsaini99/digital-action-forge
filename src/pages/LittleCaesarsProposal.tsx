@@ -14,7 +14,7 @@ const LittleCaesarsProposal = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header with Both Logos */}
-      <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-50 py-4">
+      <header className="bg-white shadow-md py-4">
         <div className="container mx-auto px-6 flex items-center justify-between">
           <Logo />
           <img 
@@ -26,7 +26,7 @@ const LittleCaesarsProposal = () => {
       </header>
 
       {/* Slide 1: Mission */}
-      <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#E66200] to-[#FF8533] text-white relative overflow-hidden pt-20">
+      <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#E66200] to-[#FF8533] text-white relative overflow-hidden">
         <div className="container mx-auto px-6 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
