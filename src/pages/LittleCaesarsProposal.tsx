@@ -463,17 +463,17 @@ const LittleCaesarsProposal = () => {
             <p className="text-3xl mb-12 font-light">Fresh dough, vine-ripened tomatoes, and cheese that makes you swoon</p>
             
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Story Placeholder with Interactive Element */}
+              {/* Story Video with Interactive Element */}
               <div className="relative">
-                <div className="aspect-[9/16] bg-gradient-to-br from-green-600 to-green-800 rounded-3xl shadow-2xl overflow-hidden flex items-center justify-center max-w-sm mx-auto border-4 border-white/30">
-                  <div className="text-center p-6">
-                    <div className="w-16 h-16 bg-white/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-3xl">🎯</span>
-                    </div>
-                    <p className="text-white/80 text-sm uppercase tracking-wider">Creative 6 - Interactive Story</p>
-                    <p className="text-white text-lg mt-2">Arc A - 15 sec</p>
-                    <p className="text-white/70 text-sm mt-4">with poll/quiz/slider</p>
-                  </div>
+                <div className="rounded-3xl shadow-2xl overflow-hidden max-w-sm mx-auto border-4 border-white/30" style={{ padding: '177.78% 0 0 0', position: 'relative' }}>
+                  <iframe 
+                    src="https://player.vimeo.com/video/1125060019?badge=0&autopause=0&player_id=0&app_id=58479" 
+                    frameBorder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                    referrerPolicy="strict-origin-when-cross-origin" 
+                    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} 
+                    title="Creative 6"
+                  />
                 </div>
               </div>
 
