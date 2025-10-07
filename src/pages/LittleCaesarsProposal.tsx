@@ -240,7 +240,7 @@ const LittleCaesarsProposal = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="grid md:grid-cols-2 gap-6 items-start">
+            <div className="grid md:grid-cols-2 gap-6 items-center">
               {/* Post Content */}
               <div className="space-y-4">
                 <div className="bg-[#E66200]/20 p-4 rounded-xl border-l-4 border-[#E66200]">
