@@ -5,6 +5,7 @@ import ContactCTA from '../components/ContactCTA';
 import ImageLoader from '../components/ImageLoader';
 import { Button } from '@/components/ui/button';
 import SocialMediaWorkShowcase from '../components/SocialMediaWorkShowcase';
+import socialMediaHero from '@/assets/social-media-management-hero.jpg';
 
 // Define all service details in a single place for easy maintenance
 const serviceDetails = {
@@ -59,8 +60,8 @@ const serviceDetails = {
       'Integration with broader marketing initiatives',
       'Data-driven content optimization based on audience response'
     ],
-    image: '/images/services/social-media.jpg',
-    fallbackImage: 'https://via.placeholder.com/800x500?text=Social+Media+Management'
+    image: socialMediaHero,
+    fallbackImage: socialMediaHero
   },
   'influencer-marketing': {
     title: 'Influencer Marketing',
