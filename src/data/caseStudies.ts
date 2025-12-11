@@ -39,11 +39,7 @@ export const caseStudies: CaseStudyData[] = [
         suffix: "x"
       }
     ],
-    gallery: [
-      '/images/case-studies/bmw-gallery-1.jpg',
-      '/images/case-studies/bmw-gallery-2.jpg',
-      '/images/case-studies/bmw-gallery-3.jpg',
-    ]
+    gallery: []
   },
   {
     id: 'aster-pharmacy-dubai',
@@ -82,11 +78,7 @@ export const caseStudies: CaseStudyData[] = [
         suffix: "%"
       }
     ],
-    gallery: [
-      '/images/case-studies/aster-gallery-1.jpg',
-      '/images/case-studies/aster-gallery-2.jpg',
-      '/images/case-studies/aster-gallery-3.jpg',
-    ]
+    gallery: []
   },
   {
     id: 'jbl-harman-campaign',
@@ -125,11 +117,7 @@ export const caseStudies: CaseStudyData[] = [
         suffix: "%"
       }
     ],
-    gallery: [
-      '/images/case-studies/jbl-gallery-1.jpg',
-      '/images/case-studies/jbl-gallery-2.jpg',
-      '/images/case-studies/jbl-gallery-3.jpg',
-    ]
+    gallery: []
   },
   {
     id: 'kohinoor-basmati-rice',
@@ -168,11 +156,7 @@ export const caseStudies: CaseStudyData[] = [
         suffix: "M+"
       }
     ],
-    gallery: [
-      '/images/case-studies/kohinoor-gallery-1.jpg',
-      '/images/case-studies/kohinoor-gallery-2.jpg',
-      '/images/case-studies/kohinoor-gallery-3.jpg',
-    ]
+    gallery: []
   }
 ];
 
