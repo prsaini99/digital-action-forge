@@ -4,6 +4,7 @@ import { ArrowLeft, BrainCircuit, Code, Boxes, LineChart, Megaphone, Users, Shie
 import ContactCTA from '../components/ContactCTA';
 import ImageLoader from '../components/ImageLoader';
 import { Button } from '@/components/ui/button';
+import SocialMediaWorkShowcase from '../components/SocialMediaWorkShowcase';
 
 // Define all service details in a single place for easy maintenance
 const serviceDetails = {
@@ -360,6 +361,9 @@ const ServiceDetail = () => {
           </div>
         </div>
       </section>
+
+      {/* Social Media Work Showcase - Only for social-media-management */}
+      {serviceId === 'social-media-management' && <SocialMediaWorkShowcase />}
 
       {/* CTA Section */}
       <section className="section-padding bg-white">
