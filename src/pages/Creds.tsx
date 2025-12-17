@@ -54,91 +54,111 @@ const softwareServices = [
   'UI/UX design & prototyping'
 ];
 
-// Client logos with actual images
+// Client logos with actual images from PPT
 const clientLogos = {
   longTerm: [
-    { name: 'Kohinoor', logo: '/Kohinoor Basmati Rice.webp' },
-    { name: 'JBL Harman', logo: '/JBL Harman.png' },
-    { name: 'BMW', logo: '/BMW.svg' },
-    { name: 'Sleepwell', logo: '/social-media-work/sleepwell-social.jpg' },
-    { name: 'Parryware', logo: '/social-media-work/parryware-social.jpg' },
-    { name: 'Canon', logo: '/35.png' },
+    { name: 'Client 1', logo: '/creds/clients/logo1.jpg' },
+    { name: 'Client 2', logo: '/creds/clients/logo2.png' },
+    { name: 'Client 3', logo: '/creds/clients/logo3.jpg' },
+    { name: 'Client 4', logo: '/creds/clients/logo4.jpg' },
   ],
   midTerm: [
-    { name: 'KFC', logo: '/social-media-work/kfc-social.jpg' },
-    { name: 'Britannia', logo: '/social-media-work/britannia-social.jpg' },
-    { name: 'Barista', logo: '/social-media-work/barista-social.jpg' },
-    { name: 'Beer Cafe', logo: '/social-media-work/beer-cafe-social.jpg' },
-    { name: 'Canara HSBC', logo: '/social-media-work/canara-hsbc-social.jpg' },
+    { name: 'Client 5', logo: '/creds/clients/logo5.png' },
+    { name: 'Client 6', logo: '/creds/clients/logo6.png' },
+    { name: 'Client 7', logo: '/creds/clients/logo7.jpg' },
+    { name: 'Client 8', logo: '/creds/clients/logo8.jpg' },
   ],
   recent: [
-    { name: 'Aster Pharmacy', logo: '/Aster pharmacy.webp' },
-    { name: 'Magic Moments', logo: '/social-media-work/magic-moments-social.jpg' },
-    { name: 'Hongs Kitchen', logo: '/social-media-work/hongs-kitchen-social.jpg' },
-    { name: 'Veeba', logo: '/social-media-work/veeba-social.jpg' },
-    { name: 'Flebo', logo: '/social-media-work/flebo-social.jpg' },
+    { name: 'Client 9', logo: '/creds/clients/logo9.jpg' },
+    { name: 'Client 10', logo: '/creds/clients/logo10.jpg' },
+    { name: 'Client 11', logo: '/creds/clients/logo11.png' },
+    { name: 'Client 12', logo: '/creds/clients/logo12.jpg' },
   ]
 };
 
 const socialMediaWork = [
   {
     brand: 'JBL',
-    logo: '/JBL Harman.png',
+    logo: '/creds/jbl/jbl1.jpg',
     objective: '#MuteTheWorld Campaign',
     description: 'Helped grow social media following by 100%',
     stats: { metric1: '100%', label1: 'Growth', metric2: '200+', label2: 'Posts' },
     approach: 'Business scenario analysis, creative approach, results-driven content strategy',
-    images: ['/social-media-work/jbl-social.jpg', '/24.png', '/25.png', '/26.png'],
+    images: [
+      '/creds/jbl/jbl1.jpg', '/creds/jbl/jbl2.jpg', '/creds/jbl/jbl3.jpg', '/creds/jbl/jbl4.jpg',
+      '/creds/jbl/jbl5.jpg', '/creds/jbl/jbl6.jpg', '/creds/jbl/jbl7.jpg', '/creds/jbl/jbl8.jpg',
+      '/creds/jbl/jbl9.jpg', '/creds/jbl/jbl10.jpg', '/creds/jbl/jbl11.jpg', '/creds/jbl/jbl12.jpg',
+      '/creds/jbl/jbl13.jpg', '/creds/jbl/jbl14.jpg', '/creds/jbl/jbl15.jpg', '/creds/jbl/jbl16.jpg'
+    ],
     color: 'from-orange-500 to-red-600'
   },
   {
     brand: 'Kohinoor Basmati Rice',
-    logo: '/Kohinoor Basmati Rice.webp',
+    logo: '/creds/kohinoor/kohinoor1.jpg',
     objective: 'Social Media Expansion',
     description: 'Helped in expanding consumers through social media platform',
     stats: { metric1: '1,329', label1: 'Posts', metric2: '4,233', label2: 'Followers' },
     approach: 'Recipe content, festive posts, consumer engagement campaigns',
-    images: ['/social-media-work/kohinoor-social.jpg', '/1.png', '/3.png', '/4.png'],
+    images: [
+      '/creds/kohinoor/kohinoor1.jpg', '/creds/kohinoor/kohinoor2.jpg', '/creds/kohinoor/kohinoor3.jpg', '/creds/kohinoor/kohinoor4.jpg',
+      '/creds/kohinoor/kohinoor5.jpg', '/creds/kohinoor/kohinoor6.jpg', '/creds/kohinoor/kohinoor7.jpg', '/creds/kohinoor/kohinoor8.jpg',
+      '/creds/kohinoor/kohinoor9.jpg', '/creds/kohinoor/kohinoor10.jpg', '/creds/kohinoor/kohinoor11.jpg', '/creds/kohinoor/kohinoor12.jpg'
+    ],
     color: 'from-amber-500 to-orange-600'
   },
   {
     brand: 'Parryware',
-    logo: '/social-media-work/parryware-social.jpg',
+    logo: '/creds/parryware/parryware1.jpg',
     objective: 'Brand Building',
     description: 'Helped in Brand Building through social media platform',
     stats: { metric1: '479', label1: 'Posts', metric2: '7,542', label2: 'Followers' },
     approach: 'Product launches, occasion-based marketing, brand awareness',
-    images: ['/6.png', '/7.png', '/8.png', '/9.png'],
+    images: [
+      '/creds/parryware/parryware1.jpg', '/creds/parryware/parryware2.jpg', '/creds/parryware/parryware3.jpg', '/creds/parryware/parryware4.jpg',
+      '/creds/parryware/parryware5.jpg', '/creds/parryware/parryware6.jpg', '/creds/parryware/parryware7.jpg', '/creds/parryware/parryware8.jpg',
+      '/creds/parryware/parryware9.jpg', '/creds/parryware/parryware10.jpg'
+    ],
     color: 'from-blue-500 to-cyan-600'
   },
   {
     brand: 'Sleepwell',
-    logo: '/social-media-work/sleepwell-social.jpg',
+    logo: '/creds/sleepwell/sleepwell1.jpg',
     objective: 'Sleep Awareness',
     description: 'Putting you to better sleep since 1971',
     stats: { metric1: '503', label1: 'Posts', metric2: '13.2K', label2: 'Followers' },
     approach: 'Olympic campaigns, sleep awareness contests, celebrity endorsements',
-    images: ['/10.png', '/12.png', '/14.png', '/15.png'],
+    images: [
+      '/creds/sleepwell/sleepwell1.jpg', '/creds/sleepwell/sleepwell2.jpg', '/creds/sleepwell/sleepwell3.jpg', '/creds/sleepwell/sleepwell4.jpg',
+      '/creds/sleepwell/sleepwell5.jpg', '/creds/sleepwell/sleepwell6.jpg', '/creds/sleepwell/sleepwell7.jpg', '/creds/sleepwell/sleepwell8.jpg',
+      '/creds/sleepwell/sleepwell9.jpg', '/creds/sleepwell/sleepwell10.jpg', '/creds/sleepwell/sleepwell11.jpg'
+    ],
     color: 'from-purple-500 to-indigo-600'
   },
   {
     brand: 'V-Mart',
-    logo: '/social-media-work/veeba-social.jpg',
+    logo: '/creds/vmart/vmart1.jpg',
     objective: 'Disruptive Content',
     description: 'Create content which is relevant, easy to comprehend & disruptive',
     stats: { metric1: '850+', label1: 'Posts', metric2: '25K+', label2: 'Followers' },
     approach: 'Festival campaigns, occasion content, regional engagement',
-    images: ['/16.png', '/17.png', '/18.png', '/19.png'],
+    images: [
+      '/creds/vmart/vmart1.jpg', '/creds/vmart/vmart2.jpg', '/creds/vmart/vmart3.jpg', '/creds/vmart/vmart4.jpg',
+      '/creds/vmart/vmart5.jpg', '/creds/vmart/vmart6.jpg', '/creds/vmart/vmart7.jpg', '/creds/vmart/vmart8.jpg'
+    ],
     color: 'from-pink-500 to-rose-600'
   },
   {
     brand: 'Fortis Healthcare',
-    logo: '/social-media-work/flebo-social.jpg',
+    logo: '/creds/fortis/fortis1.jpg',
     objective: 'Healthcare Awareness',
     description: 'Healthcare awareness and patient engagement campaigns',
     stats: { metric1: '320+', label1: 'Posts', metric2: '15K+', label2: 'Followers' },
     approach: '#GoWithTheFlow campaign, Oncology awareness, Health tips',
-    images: ['/20.png', '/21.png', '/22.png', '/23.png'],
+    images: [
+      '/creds/fortis/fortis1.jpg', '/creds/fortis/fortis2.jpg', '/creds/fortis/fortis3.jpg', '/creds/fortis/fortis4.jpg',
+      '/creds/fortis/fortis5.jpg', '/creds/fortis/fortis6.jpg', '/creds/fortis/fortis7.jpg', '/creds/fortis/fortis8.jpg',
+      '/creds/fortis/fortis9.jpg'
+    ],
     color: 'from-teal-500 to-emerald-600'
   }
 ];
@@ -149,21 +169,21 @@ const influencerCampaigns = [
     description: '300 micro-influencers across key geographies',
     approach: 'Regional targeting, authentic content, high engagement rates',
     results: 'Increased brand visibility in Tier 2 & 3 cities',
-    image: '/27.png'
+    images: ['/creds/vmart-influencer/vmart-inf1.jpg', '/creds/vmart-influencer/vmart-inf2.jpg', '/creds/vmart-influencer/vmart-inf3.jpg', '/creds/vmart-influencer/vmart-inf4.jpg']
   },
   {
     brand: 'Sleepwell Celebrity Campaign',
     description: 'Top celebrities for brand endorsement',
     influencers: ['Yasmin Karachiwala', 'Samantha Akkineni', 'Suresh Raina', 'Malaika Arora'],
     results: 'Massive reach and brand recall improvement',
-    image: '/28.png'
+    images: ['/creds/sleepwell-influencer/sleepwell-inf1.png', '/creds/sleepwell-influencer/sleepwell-inf2.jpg', '/creds/sleepwell-influencer/sleepwell-inf3.jpg']
   },
   {
     brand: 'Canara HSBC Life Insurance',
     description: 'Influencer-driven awareness campaign',
     approach: 'Financial influencers, trust-building content',
     results: 'Increased policy inquiries and brand trust',
-    image: '/social-media-work/canara-hsbc-social.jpg'
+    images: ['/creds/canara-hsbc/canara1.jpg', '/creds/canara-hsbc/canara2.jpg']
   }
 ];
 
@@ -173,7 +193,11 @@ const performanceMarketing = [
     objective: 'Drive website traffic and engagement',
     results: { metric1: '183,528', label1: 'Traffic', metric2: '7x', label2: 'Growth' },
     approach: 'SEO optimization, content marketing, paid campaigns',
-    images: ['/29.png', '/30.png'],
+    images: [
+      '/creds/tetra-pak/tetra1.png', '/creds/tetra-pak/tetra2.jpg', '/creds/tetra-pak/tetra3.jpg', '/creds/tetra-pak/tetra4.jpg',
+      '/creds/tetra-pak/tetra5.jpg', '/creds/tetra-pak/tetra6.jpg', '/creds/tetra-pak/tetra7.png', '/creds/tetra-pak/tetra8.jpg',
+      '/creds/tetra-pak/tetra9.jpg', '/creds/tetra-pak/tetra10.jpg'
+    ],
     color: 'from-green-500 to-emerald-600'
   },
   {
@@ -181,7 +205,10 @@ const performanceMarketing = [
     objective: 'Improve conversion rates and lead generation',
     results: { metric1: '2% → 9%', label1: 'Conversion', metric2: '350%', label2: 'Increase' },
     approach: 'CPA optimization, lead nurturing, retention strategies',
-    images: ['/31.png', '/32.png'],
+    images: [
+      '/creds/alchemlife/alchemlife1.png', '/creds/alchemlife/alchemlife2.png', '/creds/alchemlife/alchemlife3.jpg',
+      '/creds/alchemlife/alchemlife4.jpg', '/creds/alchemlife/alchemlife5.png', '/creds/alchemlife/alchemlife6.png'
+    ],
     color: 'from-violet-500 to-purple-600'
   },
   {
@@ -189,7 +216,7 @@ const performanceMarketing = [
     objective: 'Make BMW preferred choice for luxury segment',
     results: { metric1: '50+', label1: 'Events', metric2: 'Premium', label2: 'Reach' },
     approach: 'Kids Canvas Program, Golf events, experiential marketing',
-    images: ['/BMW.svg', '/social-media-work/bmw-campaigns.jpg'],
+    images: ['/creds/bmw/bmw1.jpg', '/creds/bmw/bmw2.jpg', '/creds/bmw/bmw3.jpg'],
     color: 'from-slate-600 to-slate-800'
   }
 ];
@@ -199,13 +226,13 @@ const gulfProjects = [
     brand: 'Lebane Solutions',
     regions: ['Jordan', 'Kuwait', 'Bahrain', 'Qatar', 'Saudi Arabia', 'UAE', 'Oman', 'Yemen'],
     description: 'Multi-country digital marketing operations',
-    image: '/33.png'
+    images: ['/creds/lebane/lebane1.jpg', '/creds/lebane/lebane2.jpg', '/creds/lebane/lebane3.jpg']
   },
   {
     brand: 'Aster Pharmacy UAE',
     results: '15% revenue growth in 4 months',
     approach: 'Google Search Ads, geo-targeted campaigns',
-    image: '/Aster pharmacy.webp'
+    images: ['/creds/aster/aster1.jpg']
   }
 ];
 
@@ -214,18 +241,21 @@ const realEstateProjects = [
     brand: 'DAMAC Lagoons',
     value: '$2B project',
     results: { sold: '65%', cpl: '30%↓', leads: '15,000' },
+    images: ['/creds/damac/damac1.jpg', '/creds/damac/damac2.jpg'],
     color: 'from-amber-600 to-yellow-500'
   },
   {
     brand: 'Urban Oasis by Missoni',
     value: '$450M project',
     results: { sold: '75%', cpl: '2M', leads: 'Views' },
+    images: ['/creds/missoni/missoni1.jpg', '/creds/missoni/missoni2.jpg'],
     color: 'from-rose-600 to-pink-500'
   },
   {
     brand: 'Yasmeen City Qatar',
     value: '$1.3B project',
     results: { sold: '80%', cpl: '35%↑', leads: 'Engage' },
+    images: ['/creds/yasmeen/yasmeen1.jpg', '/creds/yasmeen/yasmeen2.jpg'],
     color: 'from-emerald-600 to-teal-500'
   }
 ];
@@ -239,11 +269,20 @@ const technicalProjects = [
   { title: 'Enterprise Blockchain Supply Chain', result: '50% fraud reduction', icon: CheckCircle }
 ];
 
+const googleArtsProject = {
+  brand: 'Google Arts & Culture',
+  description: 'Heritage businesses documentation and preservation',
+  images: [
+    '/creds/google-arts/google1.jpg', '/creds/google-arts/google2.jpg', '/creds/google-arts/google3.jpg',
+    '/creds/google-arts/google4.jpg', '/creds/google-arts/google5.jpg'
+  ]
+};
+
 const videoProjects = [
-  { brand: 'iVing', thumbnail: '/34.png' },
-  { brand: 'Canon', thumbnail: '/35.png' },
-  { brand: 'IndiaMart', thumbnail: '/36.png' },
-  { brand: 'NatureFresh', thumbnail: '/social-media-work/veeba-social.jpg' }
+  { brand: 'Video 1', thumbnail: '/creds/video/video1.png' },
+  { brand: 'Video 2', thumbnail: '/creds/video/video2.png' },
+  { brand: 'Video 3', thumbnail: '/creds/video/video3.jpg' },
+  { brand: 'Video 4', thumbnail: '/creds/video/video4.jpg' }
 ];
 
 // ============ COMPONENTS ============
@@ -296,14 +335,14 @@ const ClientLogo = ({ logo, name }: { logo: string; name: string }) => (
 );
 
 const ImageGallery = ({ images, brand }: { images: string[]; brand: string }) => (
-  <div className="grid grid-cols-2 gap-3">
-    {images.map((img, idx) => (
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+    {images.slice(0, 8).map((img, idx) => (
       <motion.div
         key={idx}
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        transition={{ delay: idx * 0.1 }}
+        transition={{ delay: idx * 0.05 }}
         className="relative aspect-square rounded-xl overflow-hidden group"
       >
         <img 
@@ -336,6 +375,11 @@ const Creds = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
+            <img 
+              src="/creds/intro/logo.jpg" 
+              alt="Chaar Log Communications" 
+              className="w-32 h-32 mx-auto mb-8 rounded-2xl shadow-2xl"
+            />
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-6">
               CHAAR LOG
               <span className="block text-cta-secondary">COMMUNICATIONS</span>
@@ -506,6 +550,18 @@ const Creds = () => {
             Our Prized Possessions
           </SectionTitle>
           
+          {/* Main client logos image */}
+          <div className="max-w-4xl mx-auto mb-12">
+            <motion.img
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              src="/creds/clients/logos-main.jpg"
+              alt="Our Clients"
+              className="w-full rounded-2xl shadow-lg"
+            />
+          </div>
+          
           <div className="space-y-16 max-w-6xl mx-auto">
             {/* Long Term Partners */}
             <div>
@@ -570,20 +626,18 @@ const Creds = () => {
                 </div>
                 
                 {/* Content */}
-                <div className="p-6 grid md:grid-cols-2 gap-8">
-                  <div>
-                    <p className="text-lg text-foreground mb-6">{work.description}</p>
-                    
-                    <div className="grid grid-cols-2 gap-4 mb-6">
-                      <StatCard value={work.stats.metric1} label={work.stats.label1} />
-                      <StatCard value={work.stats.metric2} label={work.stats.label2} />
-                    </div>
-                    
-                    <div className="p-4 bg-muted/50 rounded-xl">
-                      <p className="text-sm text-muted-foreground">
-                        <span className="font-semibold text-foreground">Approach:</span> {work.approach}
-                      </p>
-                    </div>
+                <div className="p-6">
+                  <p className="text-lg text-foreground mb-6">{work.description}</p>
+                  
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <StatCard value={work.stats.metric1} label={work.stats.label1} />
+                    <StatCard value={work.stats.metric2} label={work.stats.label2} />
+                  </div>
+                  
+                  <div className="p-4 bg-muted/50 rounded-xl mb-6">
+                    <p className="text-sm text-muted-foreground">
+                      <span className="font-semibold text-foreground">Approach:</span> {work.approach}
+                    </p>
                   </div>
                   
                   <ImageGallery images={work.images} brand={work.brand} />
@@ -611,14 +665,17 @@ const Creds = () => {
                 transition={{ delay: idx * 0.1 }}
                 className="bg-white/10 backdrop-blur rounded-2xl overflow-hidden border border-white/10"
               >
-                <div className="aspect-video relative">
-                  <img 
-                    src={campaign.image} 
-                    alt={campaign.brand}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                <div className="grid grid-cols-2 gap-1 p-1">
+                  {campaign.images.slice(0, 4).map((img, i) => (
+                    <div key={i} className="aspect-square">
+                      <img 
+                        src={img} 
+                        alt={`${campaign.brand} ${i + 1}`}
+                        className="w-full h-full object-cover rounded"
+                        loading="lazy"
+                      />
+                    </div>
+                  ))}
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-display font-bold mb-2">{campaign.brand}</h3>
@@ -661,16 +718,14 @@ const Creds = () => {
                   <p className="text-white/80">{work.objective}</p>
                 </div>
                 
-                <div className="p-6 grid md:grid-cols-3 gap-6">
-                  <div className="md:col-span-2">
-                    <p className="text-foreground mb-4">{work.approach}</p>
-                    <div className="grid grid-cols-2 gap-4">
-                      <StatCard value={work.results.metric1} label={work.results.label1} />
-                      <StatCard value={work.results.metric2} label={work.results.label2} />
-                    </div>
+                <div className="p-6">
+                  <p className="text-foreground mb-4">{work.approach}</p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <StatCard value={work.results.metric1} label={work.results.label1} />
+                    <StatCard value={work.results.metric2} label={work.results.label2} />
                   </div>
-                  <div className="grid grid-cols-2 gap-2">
-                    {work.images.map((img, i) => (
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+                    {work.images.slice(0, 4).map((img, i) => (
                       <div key={i} className="aspect-square rounded-xl overflow-hidden">
                         <img src={img} alt={`${work.brand} ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
                       </div>
@@ -701,8 +756,12 @@ const Creds = () => {
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur rounded-2xl overflow-hidden border border-white/10"
                 >
-                  <div className="aspect-video">
-                    <img src={project.image} alt={project.brand} className="w-full h-full object-cover" loading="lazy" />
+                  <div className="grid grid-cols-2 gap-1 p-1">
+                    {project.images.slice(0, 2).map((img, i) => (
+                      <div key={i} className="aspect-video">
+                        <img src={img} alt={`${project.brand} ${i + 1}`} className="w-full h-full object-cover rounded" loading="lazy" />
+                      </div>
+                    ))}
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-display font-bold mb-2">{project.brand}</h3>
@@ -732,22 +791,31 @@ const Creds = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
-                  className={`p-6 rounded-2xl bg-gradient-to-br ${project.color} text-white`}
+                  className={`rounded-2xl overflow-hidden bg-gradient-to-br ${project.color} text-white`}
                 >
-                  <h4 className="text-xl font-display font-bold mb-2">{project.brand}</h4>
-                  <p className="text-white/80 text-lg mb-4">{project.value}</p>
-                  <div className="grid grid-cols-3 gap-2 text-center">
-                    <div className="p-2 bg-black/20 rounded-lg">
-                      <div className="font-bold">{project.results.sold}</div>
-                      <div className="text-xs text-white/60">Sold</div>
-                    </div>
-                    <div className="p-2 bg-black/20 rounded-lg">
-                      <div className="font-bold">{project.results.cpl}</div>
-                      <div className="text-xs text-white/60">CPL</div>
-                    </div>
-                    <div className="p-2 bg-black/20 rounded-lg">
-                      <div className="font-bold">{project.results.leads}</div>
-                      <div className="text-xs text-white/60">Leads</div>
+                  <div className="grid grid-cols-2 gap-1 p-1">
+                    {project.images.map((img, i) => (
+                      <div key={i} className="aspect-video">
+                        <img src={img} alt={`${project.brand} ${i + 1}`} className="w-full h-full object-cover rounded" loading="lazy" />
+                      </div>
+                    ))}
+                  </div>
+                  <div className="p-6">
+                    <h4 className="text-xl font-display font-bold mb-2">{project.brand}</h4>
+                    <p className="text-white/80 text-lg mb-4">{project.value}</p>
+                    <div className="grid grid-cols-3 gap-2 text-center">
+                      <div className="p-2 bg-black/20 rounded-lg">
+                        <div className="font-bold">{project.results.sold}</div>
+                        <div className="text-xs text-white/60">Sold</div>
+                      </div>
+                      <div className="p-2 bg-black/20 rounded-lg">
+                        <div className="font-bold">{project.results.cpl}</div>
+                        <div className="text-xs text-white/60">CPL</div>
+                      </div>
+                      <div className="p-2 bg-black/20 rounded-lg">
+                        <div className="font-bold">{project.results.leads}</div>
+                        <div className="text-xs text-white/60">Leads</div>
+                      </div>
                     </div>
                   </div>
                 </motion.div>
@@ -786,8 +854,45 @@ const Creds = () => {
         </div>
       </section>
 
-      {/* Section 11: Video Production */}
+      {/* Section 11: Google Arts & Culture */}
       <section className="py-20 bg-background">
+        <div className="container-custom px-4">
+          <SectionTitle subtitle="Preserving heritage through digital storytelling">
+            Google Arts & Culture
+          </SectionTitle>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-5xl mx-auto bg-card rounded-2xl overflow-hidden border border-border shadow-lg"
+          >
+            <div className="p-6 bg-gradient-to-r from-blue-600 to-green-600 text-white">
+              <h3 className="text-2xl font-display font-bold">{googleArtsProject.brand}</h3>
+              <p className="text-white/80">{googleArtsProject.description}</p>
+            </div>
+            <div className="p-6">
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+                {googleArtsProject.images.map((img, idx) => (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: idx * 0.1 }}
+                    className="aspect-square rounded-xl overflow-hidden"
+                  >
+                    <img src={img} alt={`Google Arts ${idx + 1}`} className="w-full h-full object-cover" loading="lazy" />
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section 12: Video Production */}
+      <section className="py-20 bg-muted/30">
         <div className="container-custom px-4">
           <SectionTitle subtitle="Professional video content that tells your brand story">
             Video Production
@@ -821,7 +926,7 @@ const Creds = () => {
         </div>
       </section>
 
-      {/* Section 12: CTA Footer */}
+      {/* Section 13: CTA Footer */}
       <section className="py-20 bg-gradient-to-br from-cta-dark via-cta-primary to-cta-dark text-white">
         <div className="container-custom px-4 text-center">
           <motion.div
@@ -829,26 +934,24 @@ const Creds = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
+            <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
               Ready to Transform Your Brand?
             </h2>
-            <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white/80 max-w-2xl mx-auto mb-8">
               Let's create something extraordinary together. Reach out to discuss your next project.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a 
-                href="mailto:contact@chaarlog.com"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-cta-secondary text-white rounded-full font-semibold hover:bg-cta-secondary/90 transition-colors"
+                href="mailto:hello@chaarlog.com"
+                className="px-8 py-4 bg-white text-cta-dark font-semibold rounded-full hover:bg-cta-secondary hover:text-white transition-colors"
               >
-                <MessageSquare className="w-5 h-5" />
                 Get in Touch
               </a>
               <a 
-                href="tel:+911234567890"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 text-white rounded-full font-semibold hover:bg-white/20 transition-colors"
+                href="/contact"
+                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-cta-dark transition-colors flex items-center gap-2"
               >
-                <ExternalLink className="w-5 h-5" />
-                Call Us
+                View Our Work <ExternalLink className="w-4 h-4" />
               </a>
             </div>
           </motion.div>
