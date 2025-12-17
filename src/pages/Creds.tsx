@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { 
   Users, Target, Lightbulb, TrendingUp, Globe, Video, 
   Code, Smartphone, Share2, Camera, MessageSquare, BarChart3,
-  CheckCircle, ArrowRight, Play, ExternalLink
+  CheckCircle, ArrowRight, Play, ExternalLink, Briefcase
 } from 'lucide-react';
 
 // Animation variants
@@ -54,27 +54,59 @@ const softwareServices = [
   'UI/UX design & prototyping'
 ];
 
-const clientsByTenure = {
-  longTerm: ['Kohinoor', 'Parryware', 'Sleepwell', 'JBL Harman', 'Canon', 'Fortis Healthcare'],
-  midTerm: ['BMW Deutsche Motoren', 'V-Mart', 'Tetra Pak', 'Canara HSBC', 'AlchemLife'],
-  recent: ['DAMAC Properties', 'Lebane Solutions', 'Aster Pharmacy', 'Urban Oasis by Missoni', 'Yasmeen City']
+// Client logos with actual images
+const clientLogos = {
+  longTerm: [
+    { name: 'Kohinoor', logo: '/Kohinoor Basmati Rice.webp' },
+    { name: 'JBL Harman', logo: '/JBL Harman.png' },
+    { name: 'BMW', logo: '/BMW.svg' },
+    { name: 'Sleepwell', logo: '/social-media-work/sleepwell-social.jpg' },
+    { name: 'Parryware', logo: '/social-media-work/parryware-social.jpg' },
+    { name: 'Canon', logo: '/35.png' },
+  ],
+  midTerm: [
+    { name: 'KFC', logo: '/social-media-work/kfc-social.jpg' },
+    { name: 'Britannia', logo: '/social-media-work/britannia-social.jpg' },
+    { name: 'Barista', logo: '/social-media-work/barista-social.jpg' },
+    { name: 'Beer Cafe', logo: '/social-media-work/beer-cafe-social.jpg' },
+    { name: 'Canara HSBC', logo: '/social-media-work/canara-hsbc-social.jpg' },
+  ],
+  recent: [
+    { name: 'Aster Pharmacy', logo: '/Aster pharmacy.webp' },
+    { name: 'Magic Moments', logo: '/social-media-work/magic-moments-social.jpg' },
+    { name: 'Hongs Kitchen', logo: '/social-media-work/hongs-kitchen-social.jpg' },
+    { name: 'Veeba', logo: '/social-media-work/veeba-social.jpg' },
+    { name: 'Flebo', logo: '/social-media-work/flebo-social.jpg' },
+  ]
 };
 
 const socialMediaWork = [
   {
+    brand: 'JBL',
+    logo: '/JBL Harman.png',
+    objective: '#MuteTheWorld Campaign',
+    description: 'Helped grow social media following by 100%',
+    stats: { metric1: '100%', label1: 'Growth', metric2: '200+', label2: 'Posts' },
+    approach: 'Business scenario analysis, creative approach, results-driven content strategy',
+    images: ['/social-media-work/jbl-social.jpg', '/24.png', '/25.png', '/26.png'],
+    color: 'from-orange-500 to-red-600'
+  },
+  {
     brand: 'Kohinoor Basmati Rice',
     logo: '/Kohinoor Basmati Rice.webp',
-    objective: 'Helped in expanding consumers through social media platform',
-    stats: { posts: '1,329', followers: '4,233' },
+    objective: 'Social Media Expansion',
+    description: 'Helped in expanding consumers through social media platform',
+    stats: { metric1: '1,329', label1: 'Posts', metric2: '4,233', label2: 'Followers' },
     approach: 'Recipe content, festive posts, consumer engagement campaigns',
-    images: ['/1.png', '/3.png', '/4.png', '/5.png'],
+    images: ['/social-media-work/kohinoor-social.jpg', '/1.png', '/3.png', '/4.png'],
     color: 'from-amber-500 to-orange-600'
   },
   {
     brand: 'Parryware',
     logo: '/social-media-work/parryware-social.jpg',
-    objective: 'Helped in Brand Building through social media platform',
-    stats: { posts: '479', followers: '7,542' },
+    objective: 'Brand Building',
+    description: 'Helped in Brand Building through social media platform',
+    stats: { metric1: '479', label1: 'Posts', metric2: '7,542', label2: 'Followers' },
     approach: 'Product launches, occasion-based marketing, brand awareness',
     images: ['/6.png', '/7.png', '/8.png', '/9.png'],
     color: 'from-blue-500 to-cyan-600'
@@ -82,8 +114,9 @@ const socialMediaWork = [
   {
     brand: 'Sleepwell',
     logo: '/social-media-work/sleepwell-social.jpg',
-    objective: 'Putting you to better sleep since 1971',
-    stats: { posts: '503', followers: '13.2k' },
+    objective: 'Sleep Awareness',
+    description: 'Putting you to better sleep since 1971',
+    stats: { metric1: '503', label1: 'Posts', metric2: '13.2K', label2: 'Followers' },
     approach: 'Olympic campaigns, sleep awareness contests, celebrity endorsements',
     images: ['/10.png', '/12.png', '/14.png', '/15.png'],
     color: 'from-purple-500 to-indigo-600'
@@ -91,8 +124,9 @@ const socialMediaWork = [
   {
     brand: 'V-Mart',
     logo: '/social-media-work/veeba-social.jpg',
-    objective: 'Create content which is relevant, easy to comprehend & disruptive',
-    stats: { posts: '850+', followers: '25k+' },
+    objective: 'Disruptive Content',
+    description: 'Create content which is relevant, easy to comprehend & disruptive',
+    stats: { metric1: '850+', label1: 'Posts', metric2: '25K+', label2: 'Followers' },
     approach: 'Festival campaigns, occasion content, regional engagement',
     images: ['/16.png', '/17.png', '/18.png', '/19.png'],
     color: 'from-pink-500 to-rose-600'
@@ -100,20 +134,12 @@ const socialMediaWork = [
   {
     brand: 'Fortis Healthcare',
     logo: '/social-media-work/flebo-social.jpg',
-    objective: 'Healthcare awareness and patient engagement campaigns',
-    stats: { posts: '320+', followers: '15k+' },
+    objective: 'Healthcare Awareness',
+    description: 'Healthcare awareness and patient engagement campaigns',
+    stats: { metric1: '320+', label1: 'Posts', metric2: '15K+', label2: 'Followers' },
     approach: '#GoWithTheFlow campaign, Oncology awareness, Health tips',
     images: ['/20.png', '/21.png', '/22.png', '/23.png'],
     color: 'from-teal-500 to-emerald-600'
-  },
-  {
-    brand: 'JBL',
-    logo: '/JBL Harman.png',
-    objective: '#MuteTheWorld campaign - Helped grow social media following by 100%',
-    stats: { posts: '200+', followers: '100% growth' },
-    approach: 'Business scenario analysis, creative approach, results-driven content',
-    images: ['/social-media-work/jbl-social.jpg', '/24.png', '/25.png', '/26.png'],
-    color: 'from-orange-500 to-red-600'
   }
 ];
 
@@ -145,7 +171,7 @@ const performanceMarketing = [
   {
     brand: 'Tetra Pak',
     objective: 'Drive website traffic and engagement',
-    results: { traffic: '183,528', growth: '7x website traffic increase' },
+    results: { metric1: '183,528', label1: 'Traffic', metric2: '7x', label2: 'Growth' },
     approach: 'SEO optimization, content marketing, paid campaigns',
     images: ['/29.png', '/30.png'],
     color: 'from-green-500 to-emerald-600'
@@ -153,7 +179,7 @@ const performanceMarketing = [
   {
     brand: 'AlchemLife',
     objective: 'Improve conversion rates and lead generation',
-    results: { conversion: '2% to 9%', improvement: '350% increase' },
+    results: { metric1: '2% → 9%', label1: 'Conversion', metric2: '350%', label2: 'Increase' },
     approach: 'CPA optimization, lead nurturing, retention strategies',
     images: ['/31.png', '/32.png'],
     color: 'from-violet-500 to-purple-600'
@@ -161,7 +187,7 @@ const performanceMarketing = [
   {
     brand: 'BMW Deutsche Motoren',
     objective: 'Make BMW preferred choice for luxury segment',
-    results: { events: '50+', engagement: 'Premium audience reach' },
+    results: { metric1: '50+', label1: 'Events', metric2: 'Premium', label2: 'Reach' },
     approach: 'Kids Canvas Program, Golf events, experiential marketing',
     images: ['/BMW.svg', '/social-media-work/bmw-campaigns.jpg'],
     color: 'from-slate-600 to-slate-800'
@@ -187,19 +213,19 @@ const realEstateProjects = [
   {
     brand: 'DAMAC Lagoons',
     value: '$2B project',
-    results: { sold: '65% Phase 1', cpl: '30% decrease', leads: '15,000' },
+    results: { sold: '65%', cpl: '30%↓', leads: '15,000' },
     color: 'from-amber-600 to-yellow-500'
   },
   {
     brand: 'Urban Oasis by Missoni',
     value: '$450M project',
-    results: { sold: '75% pre-completion', impressions: '2M video' },
+    results: { sold: '75%', cpl: '2M', leads: 'Views' },
     color: 'from-rose-600 to-pink-500'
   },
   {
     brand: 'Yasmeen City Qatar',
     value: '$1.3B project',
-    results: { sold: '80%', engagement: '35% increase' },
+    results: { sold: '80%', cpl: '35%↑', leads: 'Engage' },
     color: 'from-emerald-600 to-teal-500'
   }
 ];
@@ -222,13 +248,13 @@ const videoProjects = [
 
 // ============ COMPONENTS ============
 
-const SectionTitle = ({ children, subtitle }: { children: React.ReactNode; subtitle?: string }) => (
+const SectionTitle = ({ children, subtitle, light = false }: { children: React.ReactNode; subtitle?: string; light?: boolean }) => (
   <div className="text-center mb-12">
     <motion.h2 
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4"
+      className={`text-3xl md:text-5xl font-display font-bold mb-4 ${light ? 'text-white' : 'text-foreground'}`}
     >
       {children}
     </motion.h2>
@@ -237,7 +263,7 @@ const SectionTitle = ({ children, subtitle }: { children: React.ReactNode; subti
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="text-muted-foreground text-lg max-w-2xl mx-auto"
+        className={`text-lg max-w-2xl mx-auto ${light ? 'text-white/70' : 'text-muted-foreground'}`}
       >
         {subtitle}
       </motion.p>
@@ -250,6 +276,23 @@ const StatCard = ({ value, label }: { value: string; label: string }) => (
     <div className="text-2xl md:text-3xl font-bold text-cta-secondary">{value}</div>
     <div className="text-sm text-muted-foreground">{label}</div>
   </div>
+);
+
+const ClientLogo = ({ logo, name }: { logo: string; name: string }) => (
+  <motion.div
+    initial={{ opacity: 0, scale: 0.8 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    viewport={{ once: true }}
+    className="flex items-center justify-center p-4 bg-white rounded-xl shadow-sm border border-border hover:shadow-md transition-shadow"
+    style={{ minWidth: '140px', height: '80px' }}
+  >
+    <img 
+      src={logo} 
+      alt={name}
+      className="max-h-12 max-w-[120px] object-contain"
+      loading="lazy"
+    />
+  </motion.div>
 );
 
 const ImageGallery = ({ images, brand }: { images: string[]; brand: string }) => (
@@ -280,14 +323,14 @@ const ImageGallery = ({ images, brand }: { images: string[]; brand: string }) =>
 const Creds = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
+      {/* Section 1: Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-cta-dark via-cta-primary to-cta-dark">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-20 w-72 h-72 bg-cta-secondary rounded-full blur-[120px]" />
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-cta-accent rounded-full blur-[150px]" />
         </div>
         
-        <div className="container-custom relative z-10 text-center">
+        <div className="container-custom relative z-10 text-center px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -300,11 +343,11 @@ const Creds = () => {
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-8">
               A Digital Marketing venture by the people
             </p>
-            <div className="flex flex-wrap justify-center gap-4 text-white/60">
-              <span className="px-4 py-2 bg-white/10 rounded-full">Social Media</span>
-              <span className="px-4 py-2 bg-white/10 rounded-full">Performance Marketing</span>
-              <span className="px-4 py-2 bg-white/10 rounded-full">Influencer Marketing</span>
-              <span className="px-4 py-2 bg-white/10 rounded-full">AI & Tech</span>
+            <div className="flex flex-wrap justify-center gap-3 text-white/60">
+              <span className="px-4 py-2 bg-white/10 rounded-full text-sm">Social Media</span>
+              <span className="px-4 py-2 bg-white/10 rounded-full text-sm">Performance Marketing</span>
+              <span className="px-4 py-2 bg-white/10 rounded-full text-sm">Influencer Marketing</span>
+              <span className="px-4 py-2 bg-white/10 rounded-full text-sm">AI & Tech</span>
             </div>
           </motion.div>
           
@@ -321,9 +364,9 @@ const Creds = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="section-padding bg-background">
-        <div className="container-custom">
+      {/* Section 2: Who Are We */}
+      <section className="py-20 bg-background">
+        <div className="container-custom px-4">
           <SectionTitle subtitle="We combine technology with content to deliver exceptional results">
             Who Are We?
           </SectionTitle>
@@ -370,9 +413,9 @@ const Creds = () => {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="section-padding bg-muted/30">
-        <div className="container-custom">
+      {/* Section 3: What We Do - Services */}
+      <section className="py-20 bg-muted/30">
+        <div className="container-custom px-4">
           <SectionTitle subtitle="Comprehensive digital solutions for modern brands">
             What We Do
           </SectionTitle>
@@ -382,7 +425,7 @@ const Creds = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto"
           >
             {services.map((service, idx) => (
               <motion.div
@@ -399,11 +442,11 @@ const Creds = () => {
         </div>
       </section>
 
-      {/* AI & Tech Services */}
-      <section className="section-padding bg-gradient-to-br from-cta-dark to-slate-900 text-white">
-        <div className="container-custom">
-          <SectionTitle subtitle="Cutting-edge technology solutions powered by AI">
-            <span className="text-white">AI & Software Development</span>
+      {/* Section 4: AI & Software Development */}
+      <section className="py-20 bg-gradient-to-br from-cta-dark to-slate-900 text-white">
+        <div className="container-custom px-4">
+          <SectionTitle subtitle="Cutting-edge technology solutions powered by AI" light>
+            AI & Software Development
           </SectionTitle>
           
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -456,64 +499,40 @@ const Creds = () => {
         </div>
       </section>
 
-      {/* Client Portfolio */}
-      <section className="section-padding bg-background">
-        <div className="container-custom">
+      {/* Section 5: Our Clients - Logo Grid */}
+      <section className="py-20 bg-background">
+        <div className="container-custom px-4">
           <SectionTitle subtitle="Trusted by leading brands across industries">
-            Our Clients
+            Our Prized Possessions
           </SectionTitle>
           
-          <div className="space-y-12 max-w-5xl mx-auto">
+          <div className="space-y-16 max-w-6xl mx-auto">
+            {/* Long Term Partners */}
             <div>
-              <h3 className="text-lg font-semibold text-muted-foreground mb-4 text-center">4+ Years Partnership</h3>
-              <div className="flex flex-wrap justify-center gap-6">
-                {clientsByTenure.longTerm.map((client, idx) => (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: idx * 0.1 }}
-                    className="px-6 py-3 bg-gradient-to-r from-cta-secondary/10 to-cta-accent/10 rounded-full border border-cta-secondary/20 font-medium"
-                  >
-                    {client}
-                  </motion.div>
+              <h3 className="text-lg font-semibold text-cta-secondary mb-6 text-center">4+ Years Partnership</h3>
+              <div className="flex flex-wrap justify-center gap-4">
+                {clientLogos.longTerm.map((client, idx) => (
+                  <ClientLogo key={idx} logo={client.logo} name={client.name} />
                 ))}
               </div>
             </div>
             
+            {/* Mid Term Partners */}
             <div>
-              <h3 className="text-lg font-semibold text-muted-foreground mb-4 text-center">2-4 Years Partnership</h3>
-              <div className="flex flex-wrap justify-center gap-6">
-                {clientsByTenure.midTerm.map((client, idx) => (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: idx * 0.1 }}
-                    className="px-6 py-3 bg-muted rounded-full border border-border font-medium"
-                  >
-                    {client}
-                  </motion.div>
+              <h3 className="text-lg font-semibold text-muted-foreground mb-6 text-center">2-4 Years Partnership</h3>
+              <div className="flex flex-wrap justify-center gap-4">
+                {clientLogos.midTerm.map((client, idx) => (
+                  <ClientLogo key={idx} logo={client.logo} name={client.name} />
                 ))}
               </div>
             </div>
             
+            {/* Recent Partners */}
             <div>
-              <h3 className="text-lg font-semibold text-muted-foreground mb-4 text-center">Recent Partnerships</h3>
-              <div className="flex flex-wrap justify-center gap-6">
-                {clientsByTenure.recent.map((client, idx) => (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: idx * 0.1 }}
-                    className="px-6 py-3 bg-card rounded-full border border-border font-medium"
-                  >
-                    {client}
-                  </motion.div>
+              <h3 className="text-lg font-semibold text-muted-foreground mb-6 text-center">Recent Partnerships</h3>
+              <div className="flex flex-wrap justify-center gap-4">
+                {clientLogos.recent.map((client, idx) => (
+                  <ClientLogo key={idx} logo={client.logo} name={client.name} />
                 ))}
               </div>
             </div>
@@ -521,41 +540,53 @@ const Creds = () => {
         </div>
       </section>
 
-      {/* Social Media Work */}
-      <section className="section-padding bg-muted/30">
-        <div className="container-custom">
+      {/* Section 6: Social Media Management */}
+      <section className="py-20 bg-muted/30">
+        <div className="container-custom px-4">
           <SectionTitle subtitle="Building brand presence across digital platforms">
             Social Media Management
           </SectionTitle>
           
-          <div className="space-y-16">
+          <div className="space-y-20 max-w-6xl mx-auto">
             {socialMediaWork.map((work, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className={`grid md:grid-cols-2 gap-8 items-center ${idx % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
+                className="bg-card rounded-3xl overflow-hidden border border-border shadow-lg"
               >
-                <div className={`order-2 ${idx % 2 === 1 ? 'md:order-1' : 'md:order-2'}`}>
-                  <ImageGallery images={work.images} brand={work.brand} />
+                {/* Header with Brand Info */}
+                <div className={`p-6 bg-gradient-to-r ${work.color} text-white`}>
+                  <div className="flex items-center gap-4">
+                    <div className="w-16 h-16 bg-white rounded-xl p-2 flex items-center justify-center">
+                      <img src={work.logo} alt={work.brand} className="max-h-10 max-w-12 object-contain" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-display font-bold">{work.brand}</h3>
+                      <p className="text-white/80">{work.objective}</p>
+                    </div>
+                  </div>
                 </div>
                 
-                <div className={`order-1 ${idx % 2 === 1 ? 'md:order-2' : 'md:order-1'}`}>
-                  <div className={`inline-block px-4 py-2 bg-gradient-to-r ${work.color} text-white rounded-full text-sm font-medium mb-4`}>
-                    Case Study
+                {/* Content */}
+                <div className="p-6 grid md:grid-cols-2 gap-8">
+                  <div>
+                    <p className="text-lg text-foreground mb-6">{work.description}</p>
+                    
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                      <StatCard value={work.stats.metric1} label={work.stats.label1} />
+                      <StatCard value={work.stats.metric2} label={work.stats.label2} />
+                    </div>
+                    
+                    <div className="p-4 bg-muted/50 rounded-xl">
+                      <p className="text-sm text-muted-foreground">
+                        <span className="font-semibold text-foreground">Approach:</span> {work.approach}
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-3xl font-display font-bold text-foreground mb-4">{work.brand}</h3>
-                  <p className="text-lg text-muted-foreground mb-6">{work.objective}</p>
                   
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    <StatCard value={work.stats.posts} label="Posts Created" />
-                    <StatCard value={work.stats.followers} label="Followers" />
-                  </div>
-                  
-                  <p className="text-foreground">
-                    <span className="font-semibold">Approach:</span> {work.approach}
-                  </p>
+                  <ImageGallery images={work.images} brand={work.brand} />
                 </div>
               </motion.div>
             ))}
@@ -563,14 +594,14 @@ const Creds = () => {
         </div>
       </section>
 
-      {/* Influencer Marketing */}
-      <section className="section-padding bg-gradient-to-br from-purple-900 via-indigo-900 to-slate-900 text-white">
-        <div className="container-custom">
-          <SectionTitle subtitle="Leveraging authentic voices for brand amplification">
-            <span className="text-white">Influencer Marketing</span>
+      {/* Section 7: Influencer Marketing */}
+      <section className="py-20 bg-gradient-to-br from-purple-900 via-indigo-900 to-slate-900 text-white">
+        <div className="container-custom px-4">
+          <SectionTitle subtitle="Leveraging authentic voices for brand amplification" light>
+            Influencer Marketing
           </SectionTitle>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {influencerCampaigns.map((campaign, idx) => (
               <motion.div
                 key={idx}
@@ -599,62 +630,8 @@ const Creds = () => {
                       ))}
                     </div>
                   )}
-                  <p className="text-sm text-purple-300">
-                    <span className="font-semibold">Results:</span> {campaign.results}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Performance Marketing */}
-      <section className="section-padding bg-background">
-        <div className="container-custom">
-          <SectionTitle subtitle="Data-driven campaigns that deliver measurable results">
-            Performance Marketing
-          </SectionTitle>
-          
-          <div className="space-y-16">
-            {performanceMarketing.map((work, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="bg-card rounded-3xl overflow-hidden border border-border"
-              >
-                <div className={`p-8 bg-gradient-to-r ${work.color}`}>
-                  <h3 className="text-3xl font-display font-bold text-white">{work.brand}</h3>
-                  <p className="text-white/80 mt-2">{work.objective}</p>
-                </div>
-                <div className="p-8">
-                  <div className="grid md:grid-cols-3 gap-8">
-                    <div className="md:col-span-1">
-                      <h4 className="font-semibold text-foreground mb-4">Key Results</h4>
-                      <div className="space-y-4">
-                        {Object.entries(work.results).map(([key, value], i) => (
-                          <div key={i} className="flex justify-between items-center p-3 bg-muted rounded-lg">
-                            <span className="text-muted-foreground capitalize">{key}</span>
-                            <span className="font-bold text-cta-secondary">{value}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="md:col-span-2">
-                      <h4 className="font-semibold text-foreground mb-4">Campaign Work</h4>
-                      <div className="grid grid-cols-2 gap-4">
-                        {work.images.map((img, i) => (
-                          <div key={i} className="aspect-video rounded-xl overflow-hidden">
-                            <img src={img} alt={`${work.brand} work`} className="w-full h-full object-cover" loading="lazy" />
-                          </div>
-                        ))}
-                      </div>
-                      <p className="mt-4 text-muted-foreground">
-                        <span className="font-semibold text-foreground">Approach:</span> {work.approach}
-                      </p>
-                    </div>
+                  <div className="pt-4 border-t border-white/10">
+                    <p className="text-sm text-emerald-400 font-medium">{campaign.results}</p>
                   </div>
                 </div>
               </motion.div>
@@ -663,61 +640,42 @@ const Creds = () => {
         </div>
       </section>
 
-      {/* Gulf Region & Real Estate */}
-      <section className="section-padding bg-gradient-to-br from-slate-900 via-amber-900/20 to-slate-900 text-white">
-        <div className="container-custom">
-          <SectionTitle subtitle="Expanding reach across the Middle East & luxury real estate">
-            <span className="text-white">Gulf Region & Real Estate</span>
+      {/* Section 8: Performance Marketing */}
+      <section className="py-20 bg-background">
+        <div className="container-custom px-4">
+          <SectionTitle subtitle="Data-driven campaigns that deliver measurable results">
+            Performance Marketing
           </SectionTitle>
           
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {gulfProjects.map((project, idx) => (
+          <div className="space-y-12 max-w-6xl mx-auto">
+            {performanceMarketing.map((work, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="bg-white/10 backdrop-blur rounded-2xl overflow-hidden"
+                className="bg-card rounded-2xl overflow-hidden border border-border shadow-lg"
               >
-                <div className="aspect-video">
-                  <img src={project.image} alt={project.brand} className="w-full h-full object-cover" loading="lazy" />
+                <div className={`p-6 bg-gradient-to-r ${work.color} text-white`}>
+                  <h3 className="text-2xl font-display font-bold">{work.brand}</h3>
+                  <p className="text-white/80">{work.objective}</p>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-display font-bold mb-2">{project.brand}</h3>
-                  {project.regions && (
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.regions.map((region, i) => (
-                        <span key={i} className="px-2 py-1 bg-amber-500/20 rounded text-xs text-amber-300">{region}</span>
-                      ))}
+                
+                <div className="p-6 grid md:grid-cols-3 gap-6">
+                  <div className="md:col-span-2">
+                    <p className="text-foreground mb-4">{work.approach}</p>
+                    <div className="grid grid-cols-2 gap-4">
+                      <StatCard value={work.results.metric1} label={work.results.label1} />
+                      <StatCard value={work.results.metric2} label={work.results.label2} />
                     </div>
-                  )}
-                  {project.results && (
-                    <p className="text-amber-300 font-semibold">{project.results}</p>
-                  )}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-          
-          <h3 className="text-2xl font-display font-bold text-center mb-8">Luxury Real Estate Projects</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {realEstateProjects.map((project, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                className={`p-6 bg-gradient-to-br ${project.color} rounded-2xl text-white`}
-              >
-                <h4 className="text-xl font-display font-bold mb-2">{project.brand}</h4>
-                <p className="text-2xl font-bold mb-4">{project.value}</p>
-                <div className="space-y-2">
-                  {Object.entries(project.results).map(([key, value], i) => (
-                    <div key={i} className="flex justify-between text-sm">
-                      <span className="opacity-80 capitalize">{key}</span>
-                      <span className="font-semibold">{value}</span>
-                    </div>
-                  ))}
+                  </div>
+                  <div className="grid grid-cols-2 gap-2">
+                    {work.images.map((img, i) => (
+                      <div key={i} className="aspect-square rounded-xl overflow-hidden">
+                        <img src={img} alt={`${work.brand} ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -725,19 +683,93 @@ const Creds = () => {
         </div>
       </section>
 
-      {/* Technical Projects */}
-      <section className="section-padding bg-muted/30">
-        <div className="container-custom">
-          <SectionTitle subtitle="Building the future with cutting-edge technology">
-            Technical Projects
+      {/* Section 9: Gulf Region & Real Estate */}
+      <section className="py-20 bg-gradient-to-br from-amber-900 via-orange-900 to-rose-900 text-white">
+        <div className="container-custom px-4">
+          <SectionTitle subtitle="Expanding brands across the Middle East" light>
+            Gulf Region & Real Estate
           </SectionTitle>
           
-          <motion.div 
+          <div className="max-w-6xl mx-auto">
+            {/* Gulf Projects */}
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              {gulfProjects.map((project, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="bg-white/10 backdrop-blur rounded-2xl overflow-hidden border border-white/10"
+                >
+                  <div className="aspect-video">
+                    <img src={project.image} alt={project.brand} className="w-full h-full object-cover" loading="lazy" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-display font-bold mb-2">{project.brand}</h3>
+                    <p className="text-white/70 mb-4">{project.description || project.approach}</p>
+                    {project.regions && (
+                      <div className="flex flex-wrap gap-2">
+                        {project.regions.map((region, i) => (
+                          <span key={i} className="px-3 py-1 bg-white/20 rounded-full text-xs">{region}</span>
+                        ))}
+                      </div>
+                    )}
+                    {project.results && (
+                      <p className="text-emerald-400 font-semibold">{project.results}</p>
+                    )}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+            
+            {/* Real Estate Projects */}
+            <h3 className="text-2xl font-display font-bold text-center mb-8">Real Estate Projects</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              {realEstateProjects.map((project, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1 }}
+                  className={`p-6 rounded-2xl bg-gradient-to-br ${project.color} text-white`}
+                >
+                  <h4 className="text-xl font-display font-bold mb-2">{project.brand}</h4>
+                  <p className="text-white/80 text-lg mb-4">{project.value}</p>
+                  <div className="grid grid-cols-3 gap-2 text-center">
+                    <div className="p-2 bg-black/20 rounded-lg">
+                      <div className="font-bold">{project.results.sold}</div>
+                      <div className="text-xs text-white/60">Sold</div>
+                    </div>
+                    <div className="p-2 bg-black/20 rounded-lg">
+                      <div className="font-bold">{project.results.cpl}</div>
+                      <div className="text-xs text-white/60">CPL</div>
+                    </div>
+                    <div className="p-2 bg-black/20 rounded-lg">
+                      <div className="font-bold">{project.results.leads}</div>
+                      <div className="text-xs text-white/60">Leads</div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 10: Technical Projects */}
+      <section className="py-20 bg-muted/30">
+        <div className="container-custom px-4">
+          <SectionTitle subtitle="Innovative technology solutions that drive business growth">
+            Technical Work
+          </SectionTitle>
+          
+          <motion.div
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto"
           >
             {technicalProjects.map((project, idx) => (
               <motion.div
@@ -746,44 +778,42 @@ const Creds = () => {
                 className="p-6 bg-card rounded-2xl border border-border hover:border-cta-secondary/50 transition-all duration-300 group"
               >
                 <project.icon className="w-12 h-12 text-cta-secondary mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="text-lg font-display font-semibold text-foreground mb-2">{project.title}</h3>
-                <p className="text-2xl font-bold text-cta-secondary">{project.result}</p>
+                <h3 className="text-lg font-display font-bold text-foreground mb-2">{project.title}</h3>
+                <p className="text-cta-secondary font-semibold">{project.result}</p>
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
 
-      {/* Video Production */}
-      <section className="section-padding bg-gradient-to-br from-cta-dark to-slate-900 text-white">
-        <div className="container-custom">
-          <SectionTitle subtitle="Professional video content for digital platforms">
-            <span className="text-white">Video Production</span>
+      {/* Section 11: Video Production */}
+      <section className="py-20 bg-background">
+        <div className="container-custom px-4">
+          <SectionTitle subtitle="Professional video content that tells your brand story">
+            Video Production
           </SectionTitle>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {videoProjects.map((project, idx) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            {videoProjects.map((video, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="relative aspect-video rounded-xl overflow-hidden group cursor-pointer"
+                className="group relative aspect-video rounded-2xl overflow-hidden cursor-pointer"
               >
                 <img 
-                  src={project.thumbnail} 
-                  alt={project.brand}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  src={video.thumbnail} 
+                  alt={video.brand}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <div className="w-12 h-12 bg-white/20 backdrop-blur rounded-full flex items-center justify-center">
-                    <Play className="w-6 h-6 text-white fill-white" />
-                  </div>
+                  <Play className="w-12 h-12 text-white" />
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 to-transparent">
-                  <span className="font-medium">{project.brand}</span>
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                  <p className="text-white font-semibold">{video.brand}</p>
                 </div>
               </motion.div>
             ))}
@@ -791,26 +821,36 @@ const Creds = () => {
         </div>
       </section>
 
-      {/* Footer CTA */}
-      <section className="section-padding bg-gradient-to-r from-cta-secondary to-cta-accent text-white text-center">
-        <div className="container-custom">
+      {/* Section 12: CTA Footer */}
+      <section className="py-20 bg-gradient-to-br from-cta-dark via-cta-primary to-cta-dark text-white">
+        <div className="container-custom px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">
               Ready to Transform Your Brand?
             </h2>
             <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-              Let's create something extraordinary together.
+              Let's create something extraordinary together. Reach out to discuss your next project.
             </p>
-            <a 
-              href="mailto:hello@chaarlog.com"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white text-cta-secondary rounded-full font-semibold hover:bg-white/90 transition-colors"
-            >
-              Get In Touch <ExternalLink className="w-5 h-5" />
-            </a>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a 
+                href="mailto:contact@chaarlog.com"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-cta-secondary text-white rounded-full font-semibold hover:bg-cta-secondary/90 transition-colors"
+              >
+                <MessageSquare className="w-5 h-5" />
+                Get in Touch
+              </a>
+              <a 
+                href="tel:+911234567890"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 text-white rounded-full font-semibold hover:bg-white/20 transition-colors"
+              >
+                <ExternalLink className="w-5 h-5" />
+                Call Us
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
