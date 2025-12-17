@@ -23,6 +23,9 @@ import NriStrategy from "./pages/NriStrategy";
 import NriProposal from "./pages/NriProposal";
 import NriProjects from "./pages/NriProjects";
 
+// Credentials Page
+import Creds from "./pages/Creds";
+
 // Proposals
 import LittleCaesarsProposal from "./pages/LittleCaesarsProposal";
 
@@ -31,11 +34,11 @@ const queryClient = new QueryClient();
 const AppContent = () => {
   const location = useLocation();
   const isProposalPage = location.pathname.startsWith('/proposals/');
-  
+  const isCredsPage = location.pathname === '/creds';
   return (
     <>
       <ScrollToTop />
-      {!isProposalPage && <Navbar />}
+      {!isProposalPage && !isCredsPage && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
@@ -56,9 +59,12 @@ const AppContent = () => {
         {/* Proposal Pages - no navigation from main site */}
         <Route path="/proposals/little-caesars" element={<LittleCaesarsProposal />} />
         
+        {/* Credentials Page - no navigation from main site */}
+        <Route path="/creds" element={<Creds />} />
+        
         <Route path="*" element={<NotFound />} />
       </Routes>
-      {!isProposalPage && <Footer />}
+      {!isProposalPage && !isCredsPage && <Footer />}
     </>
   );
 };
